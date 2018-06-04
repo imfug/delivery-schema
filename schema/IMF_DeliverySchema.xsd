@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<!-- probably need a version in the targetNamespace? -->
+<xs:schema targetNamespace="http://www.imfug.com/ns/delivery-schema/2018"
+    xmlns:dsl="http://www.imfug.com/ns/delivery-schema/2018"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:element name="DeliverySpecificationList">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Id" type="dcml:UUIDType"/>
+            <xs:element name="AnnotationText" type="dcml:UserTextType" minOccurs="0"/>
+            <xs:element name="IssueDate" type="xs:dateTime"/>
+            <xs:element name="Issuer" type="dcml:UserTextType" minOccurs="0"/>
+            <xs:element name="Creator" type="dcml:UserTextType" minOccurs="0"/>
+            <xs:element name="DeliverableList">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Deliverable" minOccurs="1" maxOccurs="unbounded" type="dsl:DeliverableType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>            
+</xs:element>
+         
+<xs:complexType name="DeliverableType">
+    <xs:sequence>
+        <xs:element name="Id" type="dcml:UUIDType"/>
+            <xs:element name="Label">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                </xs:simpleType>
+            </xs:element>
+        <xs:element name="CompositionPlaylistConstraints">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="OwnerId" type="xs:anyURI"/>
+                    <xs:element name="ApplicationIdentificationList" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="MatchType">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="exclusive|inclusive"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="ValueList">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="ApplicationIdentification" type="xs:anyURI"
+                                                minOccurs="1" maxOccurs="unbounded"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ApplicationIdentification" type="xs:anyURI" minOccurs="0"/>
+                    <xs:element name="VirtualTrackList">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="VirtualTrack" type="dsl:VirtualTrackType"
+                                    minOccurs="1" maxOccurs="unbounded"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+        
+<xs:complexType name="VirtualTrackType">
+    <xs:sequence>
+        <xs:element name="Kind" type="dcml:UserTextType"/>            	
+        <xs:element name="SoundfieldGroupConfiguration" type="xs:string" minOccurs="0"/>
+        <xs:element name="AudioChannelMapping" minOccurs="0">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="AudioChannel" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="MCATagSymbol">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="(ch[A-Z]+[a-t]*){1}"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="EssenceEncoding" type="xs:string"/>
+
+<!-- prototype: essence encoding constraints -->
+        <xs:element name="EssenceEncodingConstraintList" minOccurs="0">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="EssenceEncodingConstraint" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Name" type="xs:string"/>
+                                <xs:element name="PropertyList">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="Property" maxOccurs="unbounded">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="Name" type="xs:string"/>
+                                                        <xs:element name="value" type="xs:string"/>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="scope" type="xs:anyURI" use="required"/>
+            </xs:complexType>        
+        </xs:element>
+<!-- prototype: essence encoding constraints -->
+
+        <xs:element name="Colorimetry" type="xs:string" minOccurs="0"/>
+        <xs:element name="Sampling" type="xs:string" minOccurs="0"/>
+        <xs:element name="Quantization" type="xs:string" minOccurs="0"/>
+        <xs:element name="FrameLayout" type="xs:string" minOccurs="0"/>
+        <xs:element name="ColorComponents" minOccurs="0">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="YCbCr|RGB|XYZ" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="PixelBitDepthList">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="PixelBitDepth" minOccurs="0" maxOccurs="unbounded" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="ImageFrameWidthList">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="ImageFrameWidth" minOccurs="0" maxOccurs="unbounded" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="ImageFrameHeightList">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="ImageFrameHeight" minOccurs="0" maxOccurs="unbounded" type="xs:integer"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="FrameRateList">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="FrameRate" minOccurs="0" maxOccurs="unbounded" type="dcml:RationalType"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="TimelineComplexity" minOccurs="0" maxOccurs="2">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="SequenceCardinality" type="dsl:CardinalityType" minOccurs="0">
+                        <!-- tbd -->
+            	    </xs:element>
+                    <xs:element name="ResourceCardinality" type="dsl:CardinalityType" minOccurs="0">
+                        <!-- tbd -->
+                    </xs:element>        
+                    <xs:element name="Sequence">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Cardinality" type="dsl:CardinalityType"
+                                    minOccurs="0" maxOccurs="1"/>
+                                <xs:element name="Resource">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="Cardinality" type="dsl:CardinalityType"
+                                                minOccurs="0" maxOccurs="1"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="type" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="general|explicit" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="ReferenceCardinality" minOccurs="0">
+            <xs:complexType>
+                <xs:sequence>
+            	    <xs:element name="Sequence" type="dsl:CardinalityType"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+            
+    <xs:attribute name="kind" use="required">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="MainImageSequence"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="namespace">
+        <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:complexType>
+            
+<xs:complexType name="CardinalityType">
+    <xs:sequence>
+         <xs:element name="MinItem">
+             <xs:simpleType>
+                 <xs:restriction base="xs:integer"/>
+             </xs:simpleType>
+         </xs:element>
+         <xs:element name="MaxItem">
+             <xs:simpleType>
+                 <xs:restriction base="xs:integer"/>
+             </xs:simpleType>
+         </xs:element>
+    </xs:sequence>
+</xs:complexType>
+</xs:schema>

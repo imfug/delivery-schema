@@ -45,18 +45,18 @@
                             <FrameRate>30 1</FrameRate>
                         </FrameRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -76,18 +76,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -119,18 +119,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                 </VirtualTrackList>
@@ -173,18 +173,18 @@
                             <FrameRate>60 1</FrameRate>
                         </FrameRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -204,18 +204,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -247,18 +247,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                 </VirtualTrackList>
@@ -304,17 +304,17 @@
                         </FrameRateList>
                         <TimelineComplexity>
                             <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -334,24 +334,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                            <Segment>
+                            <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
                                     <MaxItem>1</MaxItem>
                                 </Cardinality>
-                                <Sequence>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
-                            </Segment>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -383,18 +377,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                 </VirtualTrackList>
@@ -440,18 +434,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -471,18 +465,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                     <VirtualTrack>
@@ -514,18 +508,18 @@
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
                         <TimelineComplexity>
-                                <Sequence>
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
                                     <Cardinality>
                                         <MinItem>1</MinItem>
                                         <MaxItem>1</MaxItem>
                                     </Cardinality>
-                                    <Resource>
-                                        <Cardinality>
-                                            <MinItem>1</MinItem>
-                                            <MaxItem>1</MaxItem>
-                                        </Cardinality>
-                                    </Resource>
-                                </Sequence>
+                                </Resource>
+                            </Sequence>
                         </TimelineComplexity>
                     </VirtualTrack>
                 </VirtualTrackList>
