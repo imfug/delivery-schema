@@ -44,7 +44,7 @@
                             <FrameRate>30000 1</FrameRate>
                             <FrameRate>30 1</FrameRate>
                         </FrameRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -75,7 +75,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -118,7 +118,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -172,7 +172,7 @@
                             <FrameRate>60000 1001</FrameRate>
                             <FrameRate>60 1</FrameRate>
                         </FrameRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -203,7 +203,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -246,7 +246,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -302,7 +302,7 @@
                             <FrameRate>30000 1</FrameRate>
                             <FrameRate>30 1</FrameRate>
                         </FrameRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -333,7 +333,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -376,7 +376,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -433,7 +433,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -464,7 +464,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>
@@ -507,7 +507,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity>
+                        <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
                                     <MinItem>1</MinItem>

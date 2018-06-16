@@ -5,6 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
     elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:import namespace="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"/>    
 <xs:element name="DeliverySpecificationList">
     <xs:complexType>
         <xs:sequence>
@@ -75,7 +76,17 @@
 <xs:complexType name="VirtualTrackType">
     <xs:sequence>
         <xs:element name="Kind" type="dcml:UserTextType"/>            	
-        <xs:element name="SoundfieldGroupConfiguration" type="xs:string" minOccurs="0"/>
+        <xs:element name="SoundfieldGroupConfiguration" minOccurs="0">
+            <xs:complexType>
+                <xs:element name="MCATagSymbol">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="(ch[A-Z]+[a-t]*){1}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:complexType>
+        </xs:element>
         <xs:element name="AudioChannelMapping" minOccurs="0">
             <xs:complexType>
                 <xs:sequence>
@@ -131,7 +142,8 @@
         <xs:element name="Colorimetry" type="xs:string" minOccurs="0"/>
         <xs:element name="Sampling" type="xs:string" minOccurs="0"/>
         <xs:element name="Quantization" type="xs:string" minOccurs="0"/>
-        <xs:element name="FrameLayout" type="xs:string" minOccurs="0"/>
+        <xs:element name="FrameStructure" type="xs:string" minOccurs="0"/>
+        <xs:element name="Stereoscopy" type="xs:string" minOccurs="0"/>
         <xs:element name="ColorComponents" minOccurs="0">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -139,31 +151,38 @@
                 </xs:restriction>
             </xs:simpleType>
         </xs:element>
-        <xs:element name="PixelBitDepthList">
+        <xs:element name="PixelBitDepthList" minOccurs="0">
             <xs:complexType>
                 <xs:sequence>
                     <xs:element name="PixelBitDepth" minOccurs="0" maxOccurs="unbounded" type="xs:integer"/>
                 </xs:sequence>
             </xs:complexType>
         </xs:element>
-        <xs:element name="ImageFrameWidthList">
+        <xs:element name="ImageFrameWidthList" minOccurs="0">
             <xs:complexType>
                 <xs:sequence>
                     <xs:element name="ImageFrameWidth" minOccurs="0" maxOccurs="unbounded" type="xs:integer"/>
                 </xs:sequence>
             </xs:complexType>
         </xs:element>
-        <xs:element name="ImageFrameHeightList">
+        <xs:element name="ImageFrameHeightList" minOccurs="0">
             <xs:complexType>
                 <xs:sequence>
                     <xs:element name="ImageFrameHeight" minOccurs="0" maxOccurs="unbounded" type="xs:integer"/>
                 </xs:sequence>
             </xs:complexType>
         </xs:element>
-        <xs:element name="FrameRateList">
+        <xs:element name="FrameRateList" minOccurs="0">
             <xs:complexType>
                 <xs:sequence>
                     <xs:element name="FrameRate" minOccurs="0" maxOccurs="unbounded" type="dcml:RationalType"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="SampleRateList" minOccurs="0">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="SampleRate" type="dcml:RationalType" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:complexType>
         </xs:element>
@@ -211,13 +230,6 @@
         </xs:element>
     </xs:sequence>
             
-    <xs:attribute name="kind" use="required">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="MainImageSequence"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
     <xs:attribute name="namespace">
         <xs:simpleType>
             <xs:restriction base="xs:string"/>
