@@ -78,13 +78,15 @@
         <xs:element name="Kind" type="dcml:UserTextType"/>            	
         <xs:element name="SoundfieldGroupConfiguration" minOccurs="0">
             <xs:complexType>
-                <xs:element name="MCATagSymbol">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:pattern value="(ch[A-Z]+[a-t]*){1}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
+                <xs:sequence>
+                     <xs:element name="MCATagSymbol">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="(ch[A-Z]+[a-t]*){1}"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>   
             </xs:complexType>
         </xs:element>
         <xs:element name="AudioChannelMapping" minOccurs="0">
