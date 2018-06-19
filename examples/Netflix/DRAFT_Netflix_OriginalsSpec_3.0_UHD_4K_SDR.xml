@@ -72,6 +72,7 @@
                                 <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
@@ -115,6 +116,7 @@
                                 <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
@@ -200,6 +202,7 @@
                                 <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
@@ -243,6 +246,7 @@
                                 <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
@@ -330,6 +334,7 @@
                                 <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
@@ -373,6 +378,7 @@
                                 <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
@@ -461,6 +467,7 @@
                                 <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
@@ -504,6 +511,7 @@
                                 <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
