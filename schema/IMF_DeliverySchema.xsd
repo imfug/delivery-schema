@@ -82,7 +82,7 @@
                      <xs:element name="MCATagSymbol">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:pattern value="(ch[A-Z]+[a-t]*){1}"/>
+                                <xs:pattern value="sg[0-9A-Z][0-9a-zA-Z]+"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -98,7 +98,7 @@
                                 <xs:element name="MCATagSymbol">
                                     <xs:simpleType>
                                         <xs:restriction base="xs:string">
-                                            <xs:pattern value="(ch[A-Z]+[a-t]*){1}"/>
+                                            <xs:pattern value="ch[A-Z][0-9a-zA-Z]*"/>
                                         </xs:restriction>
                                     </xs:simpleType>
                                 </xs:element>
