@@ -32,7 +32,6 @@
                         </PixelBitDepthList>
                         <ImageFrameWidthList>
                             <ImageFrameWidth>3840</ImageFrameWidth>
-                            <ImageFrameWidth>4096</ImageFrameWidth>
                         </ImageFrameWidthList>
                         <ImageFrameHeightList>
                             <ImageFrameHeight>2160</ImageFrameHeight>
@@ -164,7 +163,6 @@
                         </PixelBitDepthList>
                         <ImageFrameWidthList>
                             <ImageFrameWidth>3840</ImageFrameWidth>
-                            <ImageFrameWidth>4096</ImageFrameWidth>
                         </ImageFrameWidthList>
                         <ImageFrameHeightList>
                             <ImageFrameHeight>2160</ImageFrameHeight>
