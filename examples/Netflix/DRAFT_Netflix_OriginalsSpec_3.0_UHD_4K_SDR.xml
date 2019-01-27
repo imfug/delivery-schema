@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2018">
-    <Id>urn:uuid:fb7cd4f5-5c6c-c3d6-593e-a1005d5b9d64</Id>
+<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Id>urn:uuid:a0ce8ee4-c2b1-40eb-a14d-590429c3427d</Id>
     <AnnotationText>DRAFT Netflix Original Specification UHD/4K 3.0</AnnotationText>
-    <IssueDate>2018-05-30T16:10:06-00:00</IssueDate>
+    <IssueDate>2018-01-27T00:00:00-00:00</IssueDate>
     <Issuer>Netflix</Issuer>
     <Creator>Florian Schleich - fschleich@netflix.com</Creator>
     <DeliverableList>
@@ -18,9 +18,22 @@
                     </ValueList>
                 </ApplicationIdentificationList>
                 <VirtualTrackList>
-                    <VirtualTrack>
-                        <Kind>MainImageSequence</Kind>
+                    <ImageVirtualTrack>
                         <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
                         <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:2:2</Sampling>
                         <Quantization>QE.1</Quantization>
@@ -43,6 +56,9 @@
                             <FrameRate>30000 1</FrameRate>
                             <FrameRate>30 1</FrameRate>
                         </FrameRateList>
+                    </ImageVirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -57,24 +73,23 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sgLtRt</MCATagSymbol>
+							<MCATagSymbol>LtRt</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chLt</MCATagSymbol>
+                                <MCATagSymbol>Lt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRt</MCATagSymbol>
+                                <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
+                    </MultipleVirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -89,51 +104,33 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sg51</MCATagSymbol>
+							<MCATagSymbol>51</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chL</MCATagSymbol>
+                                <MCATagSymbol>L</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chR</MCATagSymbol>
+                                <MCATagSymbol>R</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chC</MCATagSymbol>
+                                <MCATagSymbol>C</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLFE</MCATagSymbol>
+                                <MCATagSymbol>LFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLs</MCATagSymbol>
+                                <MCATagSymbol>Ls</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRs</MCATagSymbol>
+                                <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity type="explicit">
-                            <Sequence>
-                                <Cardinality>
-                                    <MinItem>1</MinItem>
-                                    <MaxItem>1</MaxItem>
-                                </Cardinality>
-                                <Resource>
-                                    <Cardinality>
-                                        <MinItem>1</MinItem>
-                                        <MaxItem>1</MaxItem>
-                                    </Cardinality>
-                                </Resource>
-                            </Sequence>
-                        </TimelineComplexity>
-                    </VirtualTrack>
+                    </MultipleVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
@@ -149,10 +146,23 @@
                     </ValueList>
                 </ApplicationIdentificationList>
                 <VirtualTrackList>
-                    <VirtualTrack>
-                        <Kind>MainImageSequence</Kind>
+                    <ImageVirtualTrack>
                         <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M7S4</EssenceEncoding>
-                        <Colorimetry>COLOR.3</Colorimetry>
+                         <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
+                       <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:2:2</Sampling>
                         <Quantization>QE.1</Quantization>
                         <FrameStructure>Progressive</FrameStructure>
@@ -172,6 +182,9 @@
                             <FrameRate>60000 1001</FrameRate>
                             <FrameRate>60 1</FrameRate>
                         </FrameRateList>
+                    </VirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -186,24 +199,23 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sgLtRt</MCATagSymbol>
+							<MCATagSymbol>LtRt</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chLt</MCATagSymbol>
+                                <MCATagSymbol>Lt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRt</MCATagSymbol>
+                                <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
+                    </MultipleVirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -218,51 +230,33 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sg51</MCATagSymbol>
+							<MCATagSymbol>51</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chL</MCATagSymbol>
+                                <MCATagSymbol>L</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chR</MCATagSymbol>
+                                <MCATagSymbol>R</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chC</MCATagSymbol>
+                                <MCATagSymbol>C</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLFE</MCATagSymbol>
+                                <MCATagSymbol>LFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLs</MCATagSymbol>
+                                <MCATagSymbol>Ls</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRs</MCATagSymbol>
+                                <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity type="explicit">
-                            <Sequence>
-                                <Cardinality>
-                                    <MinItem>1</MinItem>
-                                    <MaxItem>1</MaxItem>
-                                </Cardinality>
-                                <Resource>
-                                    <Cardinality>
-                                        <MinItem>1</MinItem>
-                                        <MaxItem>1</MaxItem>
-                                    </Cardinality>
-                                </Resource>
-                            </Sequence>
-                        </TimelineComplexity>
-                    </VirtualTrack>
+                    </MultipleVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
@@ -278,9 +272,22 @@
                     </ValueList>
                 </ApplicationIdentificationList>
                 <VirtualTrackList>
-                    <VirtualTrack>
-                        <Kind>MainImageSequence</Kind>
+                    <ImageVirtualTrack>
                         <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
                         <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:4:4</Sampling>
                         <Quantization>QE.2</Quantization>
@@ -304,6 +311,9 @@
                             <FrameRate>30000 1</FrameRate>
                             <FrameRate>30 1</FrameRate>
                         </FrameRateList>
+                    </ImageVirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -318,24 +328,23 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sgLtRt</MCATagSymbol>
+							<MCATagSymbol>LtRt</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chLt</MCATagSymbol>
+                                <MCATagSymbol>Lt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRt</MCATagSymbol>
+                                <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
+                    </MultipleVirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                       <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -350,52 +359,34 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
-                        <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sg51</MCATagSymbol>
+                       <SoundfieldGroupConfiguration>
+							<MCATagSymbol>51</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chL</MCATagSymbol>
+                                <MCATagSymbol>L</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chR</MCATagSymbol>
+                                <MCATagSymbol>R</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chC</MCATagSymbol>
+                                <MCATagSymbol>C</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLFE</MCATagSymbol>
+                                <MCATagSymbol>LFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLs</MCATagSymbol>
+                                <MCATagSymbol>Ls</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRs</MCATagSymbol>
+                                <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity type="explicit">
-                            <Sequence>
-                                <Cardinality>
-                                    <MinItem>1</MinItem>
-                                    <MaxItem>1</MaxItem>
-                                </Cardinality>
-                                <Resource>
-                                    <Cardinality>
-                                        <MinItem>1</MinItem>
-                                        <MaxItem>1</MaxItem>
-                                    </Cardinality>
-                                </Resource>
-                            </Sequence>
-                        </TimelineComplexity>
                     </VirtualTrack>
-                </VirtualTrackList>
+                </MultipleVirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
@@ -410,9 +401,22 @@
                     </ValueList>
                 </ApplicationIdentificationList>
                 <VirtualTrackList>
-                    <VirtualTrack>
-                        <Kind>MainImageSequence</Kind>
+                    <ImageVirtualTrack>
                         <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M7S4</EssenceEncoding>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
                         <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:4:4</Sampling>
                         <Quantization>QE.2</Quantization>
@@ -434,9 +438,9 @@
                             <FrameRate>60000 1</FrameRate>
                             <FrameRate>60 1</FrameRate>
                         </FrameRateList>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                    </ImageVirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -451,24 +455,23 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sgLtRt</MCATagSymbol>
+							<MCATagSymbol>LtRt</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chLt</MCATagSymbol>
+                                <MCATagSymbol>Lt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRt</MCATagSymbol>
+                                <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
+                    </MultipleVirtualTrack>
+                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -483,51 +486,33 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                    </VirtualTrack>
-                    <VirtualTrack>
-                        <Kind>MainAudioSequence</Kind>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>sg51</MCATagSymbol>
+							<MCATagSymbol>51</MCATagSymbol>
 						</SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>chL</MCATagSymbol>
+                                <MCATagSymbol>L</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chR</MCATagSymbol>
+                                <MCATagSymbol>R</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chC</MCATagSymbol>
+                                <MCATagSymbol>C</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLFE</MCATagSymbol>
+                                <MCATagSymbol>LFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chLs</MCATagSymbol>
+                                <MCATagSymbol>Ls</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>chRs</MCATagSymbol>
+                                <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                        <TimelineComplexity type="explicit">
-                            <Sequence>
-                                <Cardinality>
-                                    <MinItem>1</MinItem>
-                                    <MaxItem>1</MaxItem>
-                                </Cardinality>
-                                <Resource>
-                                    <Cardinality>
-                                        <MinItem>1</MinItem>
-                                        <MaxItem>1</MaxItem>
-                                    </Cardinality>
-                                </Resource>
-                            </Sequence>
-                        </TimelineComplexity>
-                    </VirtualTrack>
+                    </MultipleVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
