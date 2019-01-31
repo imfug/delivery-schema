@@ -53,12 +53,14 @@
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="ApplicationIdentification" type="xs:anyURI" minOccurs="0"/>
+						<xs:element name="SegmentCardinality" type="dsl:CardinalityType" minOccurs="0">
+						</xs:element>
 						<xs:element name="VirtualTrackList">
 							<xs:complexType>
 								<xs:sequence>
 									<!-- List all Virtual tracks with maxOccurs=1 individually -->
 									<xs:element name="ImageVirtualTrack" type="dsl:ImageVirtualTrackType" minOccurs="0" maxOccurs="1"/>
-									<xs:element name="MultipleVirtualTrack" type="dsl:MultipleVirtualTrackType" minOccurs="0" maxOccurs="unbounded"/>
+									<xs:element name="AudioVirtualTrack" type="dsl:AudioVirtualTrackType" minOccurs="0" maxOccurs="unbounded"/>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -101,7 +103,7 @@
 					<xs:attribute name="scope" type="xs:anyURI" use="required"/>
 				</xs:complexType>
 			</xs:element>
-			<!-- prototype: essence encoding constraints -->
+			<!-- prototype: essence encoding constraints (deprecated - to be reconsidered)-->
 			<xs:element name="TimelineComplexity" minOccurs="0" maxOccurs="2">
 				<xs:complexType>
 					<xs:sequence>
@@ -150,26 +152,10 @@
 		</xs:attribute>
 	</xs:complexType>
 	<!-- - -->
-	<!-- Abstract base class containing all common properties for a SingleVirtualTrack -->
-	<xs:complexType name="SingleVirtualTrackType" abstract="true">
-		<xs:complexContent>
-	<xs:extension base="dsl:GenericVirtualTrackType">	
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<!-- - -->
-	<!-- Abstract base class containing all common properties for a MultipleVirtualTrack -->
-	<xs:complexType name="MultipleVirtualTrackType" abstract="true">
-		<xs:complexContent>
-	<xs:extension base="dsl:GenericVirtualTrackType">	
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<!-- - -->
-	<!-- AudioVirtualTrack extends the MultipleVirtualTrack-->
+	<!-- AudioVirtualTrack extends the GenericVirtualTrackType-->
 	<xs:complexType name="AudioVirtualTrackType">
 		<xs:complexContent>
-			<xs:extension base="dsl:MultipleVirtualTrackType">
+			<xs:extension base="dsl:GenericVirtualTrackType">
 				<xs:sequence>
 					<xs:element name="SoundfieldGroupConfiguration" minOccurs="0">
 						<xs:complexType>
@@ -226,7 +212,7 @@
 	<!-- ImageVirtualTrack extends the SingleVirtualTrack-->
 	<xs:complexType name="ImageVirtualTrackType">
 		<xs:complexContent>
-			<xs:extension base="dsl:SingleVirtualTrackType">
+			<xs:extension base="dsl:GenericVirtualTrackType">
 				<xs:sequence>
 					<xs:element name="Colorimetry" minOccurs="0">
 						<xs:simpleType>

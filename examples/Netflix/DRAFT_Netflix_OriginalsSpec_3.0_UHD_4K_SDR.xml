@@ -17,6 +17,10 @@
                         <ApplicationIdentification>http://www.smpte-ra.org/schemas/2067-21/2016</ApplicationIdentification>
                     </ValueList>
                 </ApplicationIdentificationList>
+               <SegmentCardinality>
+                   <MinItem>1</MinItem>
+                   <MaxItem>1</MaxItem>
+               </SegmentCardinality>
                 <VirtualTrackList>
                     <ImageVirtualTrack>
                         <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
@@ -57,7 +61,7 @@
                             <FrameRate>30 1</FrameRate>
                         </FrameRateList>
                     </ImageVirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -87,8 +91,8 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </MultipleVirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    </AudioVirtualTrack>
+                    <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -130,7 +134,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </MultipleVirtualTrack>
+                    </AudioVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
@@ -182,8 +186,8 @@
                             <FrameRate>60000 1001</FrameRate>
                             <FrameRate>60 1</FrameRate>
                         </FrameRateList>
-                    </VirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    </ImageVirtualTrack>
+                    <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -213,8 +217,8 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </MultipleVirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    </AudioVirtualTrack>
+                    <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -256,7 +260,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </MultipleVirtualTrack>
+                    </AudioVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
@@ -312,7 +316,7 @@
                             <FrameRate>30 1</FrameRate>
                         </FrameRateList>
                     </ImageVirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -342,8 +346,8 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </MultipleVirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    </AudioVirtualTrack>
+                    <AudioVirtualTrack>
                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -385,8 +389,8 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </VirtualTrack>
-                </MultipleVirtualTrackList>
+                    </AudioVirtualTrack>
+                </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
@@ -439,7 +443,7 @@
                             <FrameRate>60 1</FrameRate>
                         </FrameRateList>
                     </ImageVirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -469,8 +473,8 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </MultipleVirtualTrack>
-                    <MultipleVirtualTrack xsi:type="AudioVirtualTrackType">
+                    </AudioVirtualTrack>
+                    <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
@@ -512,7 +516,7 @@
 						<SampleRateList>
 							<SampleRate>48000 1</SampleRate>
 						</SampleRateList>
-                    </MultipleVirtualTrack>
+                    </AudioVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
