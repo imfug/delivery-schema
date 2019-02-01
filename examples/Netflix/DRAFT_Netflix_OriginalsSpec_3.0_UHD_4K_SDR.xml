@@ -42,7 +42,7 @@
                         <Sampling>4:2:2</Sampling>
                         <Quantization>QE.1</Quantization>
                         <FrameStructure>Progressive</FrameStructure>
-						<Stereoscopy>Monoscopic</Stereoscopy>
+                        <Stereoscopy>Monoscopic</Stereoscopy>
                         <ColorComponents>YCbCr</ColorComponents>
                         <PixelBitDepthList>
                             <PixelBitDepth>10</PixelBitDepth>
@@ -78,8 +78,8 @@
                             </Sequence>
                         </TimelineComplexity>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>LtRt</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>LtRt</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>Lt</MCATagSymbol>
@@ -88,9 +88,9 @@
                                 <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
@@ -109,8 +109,8 @@
                             </Sequence>
                         </TimelineComplexity>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>51</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>51</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>L</MCATagSymbol>
@@ -131,9 +131,9 @@
                                 <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
@@ -170,7 +170,7 @@
                         <Sampling>4:2:2</Sampling>
                         <Quantization>QE.1</Quantization>
                         <FrameStructure>Progressive</FrameStructure>
-						<Stereoscopy>Monoscopic</Stereoscopy>
+                        <Stereoscopy>Monoscopic</Stereoscopy>
                         <ColorComponents>YCbCr</ColorComponents>
                         <PixelBitDepthList>
                             <PixelBitDepth>10</PixelBitDepth>
@@ -204,8 +204,8 @@
                             </Sequence>
                         </TimelineComplexity>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>LtRt</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>LtRt</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>Lt</MCATagSymbol>
@@ -214,9 +214,9 @@
                                 <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
@@ -235,8 +235,8 @@
                             </Sequence>
                         </TimelineComplexity>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>51</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>51</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>L</MCATagSymbol>
@@ -257,9 +257,9 @@
                                 <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
@@ -296,7 +296,7 @@
                         <Sampling>4:4:4</Sampling>
                         <Quantization>QE.2</Quantization>
                         <FrameStructure>Progressive</FrameStructure>
-						<Stereoscopy>Monoscopic</Stereoscopy>
+                        <Stereoscopy>Monoscopic</Stereoscopy>
                         <ColorComponents>RGB</ColorComponents>
                         <PixelBitDepthList>
                             <PixelBitDepth>10</PixelBitDepth>
@@ -333,8 +333,8 @@
                             </Sequence>
                         </TimelineComplexity>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>LtRt</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>LtRt</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>Lt</MCATagSymbol>
@@ -343,9 +343,9 @@
                                 <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
@@ -364,8 +364,8 @@
                             </Sequence>
                         </TimelineComplexity>
                        <SoundfieldGroupConfiguration>
-							<MCATagSymbol>51</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>51</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>L</MCATagSymbol>
@@ -386,9 +386,9 @@
                                 <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
@@ -425,7 +425,7 @@
                         <Sampling>4:4:4</Sampling>
                         <Quantization>QE.2</Quantization>
                         <FrameStructure>Progressive</FrameStructure>
-						<Stereoscopy>Monoscopic</Stereoscopy>
+                        <Stereoscopy>Monoscopic</Stereoscopy>
                         <ColorComponents>RGB</ColorComponents>
                         <PixelBitDepthList>
                             <PixelBitDepth>10</PixelBitDepth>
@@ -460,8 +460,8 @@
                             </Sequence>
                         </TimelineComplexity>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>LtRt</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>LtRt</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>Lt</MCATagSymbol>
@@ -470,9 +470,9 @@
                                 <MCATagSymbol>Rt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
@@ -491,8 +491,8 @@
                             </Sequence>
                         </TimelineComplexity>
                         <SoundfieldGroupConfiguration>
-							<MCATagSymbol>51</MCATagSymbol>
-						</SoundfieldGroupConfiguration>
+                            <MCATagSymbol>51</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
                                 <MCATagSymbol>L</MCATagSymbol>
@@ -513,9 +513,9 @@
                                 <MCATagSymbol>Rs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
-						<SampleRateList>
-							<SampleRate>48000 1</SampleRate>
-						</SampleRateList>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
                     </AudioVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
