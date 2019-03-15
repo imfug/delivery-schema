@@ -5,10 +5,10 @@
 **
 
 **History**
-|Date|Author|Change|
-|--|--|--|
+|Date       |Author     |Change|
+|-----------|-----------|------|
 |2018-05-12 | Dan Tatut | Initial draft|
-|2018-08-13	| Dan Tatut | Initial ASCIIdoc version|
+|2018-08-13 | Dan Tatut | Initial ASCIIdoc version|
 |2019-03-13 | Dan Tatut | Initial StackEdit version|
 
 **Foreword**
