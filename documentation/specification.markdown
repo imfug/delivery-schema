@@ -225,12 +225,11 @@ Sampling
 
 The Sampling element defines the sampling of the color components in the image essence. The following table describes the allowed values:
 
-.Sampling values
-|===============
-|4:2:2   |
-|4:4:4   |
+|Value|
+|-----|
+|4:2:2|
+|4:4:4|
 |4:4:4:4 |
-|===============
 
 Quantization
 
@@ -246,11 +245,10 @@ FrameStructure
 
 The FrameStructure element definies the raster scanning method. Its value must be one of the following:
 
-.FrameStructure values
-|====================================================================
+|Value|Meaning|
+|-----|-------|
 |Progressive |Used for material that uses progressive raster scanning
 |Interlaced  |Used for material that uses interlaced raster scanning
-|====================================================================
 
 Stereoscopy
 
