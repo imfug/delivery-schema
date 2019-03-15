@@ -10,7 +10,7 @@
 |-----------|-----------|------|
 |2018-05-12 | Dan Tatut | Initial draft|
 |2018-08-13 | Dan Tatut | Initial ASCIIdoc version|
-|2019-03-13 | Dan Tatut | Initial StackEdit version|
+|2019-03-13 | Dan Tatut | Initial Markdown version|
 
 **Foreword**
 
@@ -100,45 +100,45 @@ In order to avoid duplication between text and schema, the cardinality and defau
 
 https://github.com/imfug/delivery-schema/blob/master/schema/IMF_DeliverySchema.xsd
 
-=== Id
+Id
 
 The Id element shall uniquely identify the Delivery Specification List instance. Any two Delivery Specification List instances may have identical Id values if and only if the two Delivery Specification List instances are identical.
 
-=== Annotation
+Annotation
 
 The Annotation element shall be a free-form, human-readable annotation describing the composition. It is meant strictly as a display hint to the user.
 
-=== IssueDate
+IssueDate
 
 The IssueDate element shall indicate the time and date at which the Delivery Specification List was issued.
 
-=== Issuer
+Issuer
 
 The Issuer element shall be a free-form, human-readable annotation that identifies the entity that created the Delivery Specification List. It is meant strictly for display to the user.
 
 Note: The Signer element defined in Section 6.1.17 is used to identify the entity that digitally signed the Delivery Specification List.
 
-=== Creator
+Creator
 
 The Creator element shall be a free-form, human-readable annotation that identifies the device or software program used to create the Delivery Specification List, the facility that created the Delivery Specification List and the operator that created the Delivery Specification List. It is meant strictly for display to the user.
 
-=== DeliverableList
+DeliverableList
 
 The DeliverableList element contains a list of Deliverable elements that fully describe individual specifications for delivery.
 
-=== Deliverable
+Deliverable
 
 The Deliverable element describes the various constraints that a deliverable should be compliant with.
 
-=== CompositionPlaylistConstraints
+CompositionPlaylistConstraints
 
 The CompositionPlaylistConstraints element contains a collection of various elements describing constraints that are applicable to the Composition.
 
-=== ApplicationIdentificationList
+ApplicationIdentificationList
 
 The ApplicationIdentificationList element contains a list of identifiers that a Composition conforms to.
 
-=== ApplicationIdentification
+ApplicationIdentification
 
 The ApplicationIdentification element shall identify an Application to which a Composition
 conforms. The specification for this element is defined in the following table:
@@ -154,64 +154,64 @@ conforms. The specification for this element is defined in the following table:
 />
 ----
 
-=== MatchType
+MatchType
 
 The MatchType element defines the matching algorithm to be used to values available in a list. The following values are allowed
 
-|==================================================
-|exlcusive | one and only one value must be present
-|inclusive | one or more values may be present
-|==================================================
+|Value|Meaning|
+|-----|-------|
+|exlcusive | one and only one value must be present|
+|inclusive | one or more values may be present|
 
-=== ValueList
+ValueList
 
 The ValueList element contains one or more elements of the same type, describing a list of possible values.
 
-=== VirtualTrackList
+VirtualTrackList
 
 The VirtualTrackList element is an ordered list of VirtualTrack elements that represent the virtual tracks used in the composition in the exact order as they should appear in the CompositionPlaylist.
 
-=== VirtualTrack
+VirtualTrack
 
 The VirtualTrack element describes the kind of track as well as the track essence properties.
 
-=== Kind
+Kind
 
 The Kind element represents the class that the virtual track belongs to. The values of the Kind element use the exact name of the element used in the CompositionPlaylist to signal the virtual track (e.g. MainImageSequence for the main image virtual track, MainAudioSequence for the audio tracks, etc).
 
-=== TimelineComplexity
+TimelineComplexity
 
 The TimelineComplexity element describes the cardinality and temporal constraints of its components.
 
-=== Segment
+Segment
 
 The Segment element describes the cardinality and temporal constraints of its components.
 
-=== Sequence
+Sequence
 
 The Sequence element describes the cardinality and temporal constraints of its components.
 
-=== Resource
+Resource
 
 The Sequence element describes the cardinality and temporal constraints of its components.
 
-=== Cardinality
+Cardinality
 
 The Cardinality element defines in the minimum and maximum number of objects of a class. The cardinality range is defined by the MinItem and MaxItem elements.
 
-=== MinItem
+MinItem
 
 The MinItem element defines the minimum number of objects of a class.
 
-=== MaxItem
+MaxItem
 
 The MaxItem element defines the maximum number of objects of a class
 
-=== EssenceEncoding
+EssenceEncoding
 
 The EssenceEncoding element defines the encoding method and/or algorithm used to encode the essence used by a specific virtual track.
 
-=== Colorimetry
+Colorimetry
 
 The Colorimetry element defines the combination of Color Primaries, Transfer Characteristic and potentially Coding Equations to be used for describing the color information in a Trackfile
 
@@ -221,7 +221,7 @@ COLOR.x
 
 where x is an alpha-numercial expression defined in the Application specification documents.
 
-=== Sampling
+Sampling
 
 The Sampling element defines the sampling of the color components in the image essence. The following table describes the allowed values:
 
@@ -232,7 +232,7 @@ The Sampling element defines the sampling of the color components in the image e
 |4:4:4:4 |
 |===============
 
-=== Quantization
+Quantization
 
 The Quantization element defines the signal quantization system used to encode the normalized signal values into code values. The allowed values depend on the Application being targetted. The syntax of the 
 
@@ -242,7 +242,7 @@ QE.x
 
 where x is an alpha-numercial value defined in the Application specification documents.
 
-=== FrameStructure
+FrameStructure
 
 The FrameStructure element definies the raster scanning method. Its value must be one of the following:
 
@@ -252,11 +252,11 @@ The FrameStructure element definies the raster scanning method. Its value must b
 |Interlaced  |Used for material that uses interlaced raster scanning
 |====================================================================
 
-=== Stereoscopy
+Stereoscopy
 
 <Stereoscopy>Monoscopic</Stereoscopy>
 
-=== ColorComponents
+ColorComponents
 
 The ColorComponents element defines the interpretation of the color channels used for the image essence. The order that the color components have in the essence is defined by the Application specification documents. The following table describes the allowed values:
 
@@ -268,79 +268,79 @@ The ColorComponents element defines the interpretation of the color channels use
 |YCbCr	
 |===============
 
-=== PixelBitDepthList
+PixelBitDepthList
 
 The PixelBitDepthList contains one or more PixelBitDepth elements that define the possible values for the pixel bitdepths
 
-=== PixelBitDepth
+PixelBitDepth
 
 The PixelBitDepth defines the pixel bitdepth value for the deliverable
 
-=== ImageFrameWidthList
+ImageFrameWidthList
 
 The ImageFrameWidthList contains one or more ImageFrameWidth elements that define the possible values for the image width.
 
-=== ImageFrameWidth
+ImageFrameWidth
 
 The ImageFrameWidth defines the intended display width.
 
-=== ImageFrameHeightList
+ImageFrameHeightList
 
 The ImageFrameHeightList contains one or more ImageFrameHeight elements that define the possible values for the image height.
 
-=== ImageFrameHeight
+ImageFrameHeight
 
 The ImageFrameHeight defines the intended display height.
 
-=== FrameRateList
+FrameRateList
 
 The FrameRateList contains one or more FrameRate elements that define the possible values for the video frame rate.
 
-=== FrameRate   
+FrameRate   
 
 The FrameRate defines the intended video frame rate.
 
-=== SoundfieldGroupConfiguration
+SoundfieldGroupConfiguration
 
 TBD
 
-=== AudioChannelMapping
+AudioChannelMapping
 
 TBD
 
-=== AudioChannel
+AudioChannel
 
 TBD
 
-=== MCATagSymbol
+MCATagSymbol
 
 TBD
 
-=== UCSEncoding
+UCSEncoding
 
 TBD
 
-=== NamespaceURI
+NamespaceURI
 
 TBD
 
-=== Signer
+Signer
 
 The Signer element shall uniquely identify the entity that digitally signed the Delivery Specification List. If the Signer element is present, then the Signature element shall also be present.
 
 If X.509 certificates are used as specified in [XML Digital Signature], then the Signer element shall contain one X509Data element containing one X509IssuerSerial element, which uniquely identifies the certificate used to sign the Delivery Specification List.
 
-=== Signature
+Signature
 
 The Signature element shall contain a digital signature authenticating the Delivery Specification List.
 If the Signature element is present, then the Signer element shall be present.
 The digital signature shall be enveloped, as specified in [XML Digital Signature], and apply to the entire Delivery Specification List. The signature is generated by the signer, as identified by the Signer element.
 
-= Annex A Bibliography (Informative)
+Annex A Bibliography (Informative)
 
 TBD
 
-= Annex B Consolidated Schema (Informative)
+Annex B Consolidated Schema (Informative)
 
 This specification is accompanied by the following element, which is an XML schema document as specified in [XML Schema Part 1: Structures].
 
@@ -348,11 +348,11 @@ imf-cpl-20160411.xsd
 
 This element collects the XML schema definitions defined in this specification. It is informative and, in case of conflict, this specification takes precedence.
 
-= Annex D Considerations for Applications (Informative)
+Annex D Considerations for Applications (Informative)
 
 TBD
 
-= Annex E Sample Instance (Informative)
+Annex E Sample Instance (Informative)
 
 This specification is accompanied by the following element, which is an XML document that contains a sample instance of the DeliverySpecificationList element.
 
