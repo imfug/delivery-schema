@@ -258,13 +258,12 @@ ColorComponents
 
 The ColorComponents element defines the interpretation of the color channels used for the image essence. The order that the color components have in the essence is defined by the Application specification documents. The following table describes the allowed values:
 
-.ColorComponents values
-|===============
-|RGB	
-|RGBA	
-|XYZ	
-|YCbCr	
-|===============
+|Values|
+|------|
+|RGB|	
+|RGBA|
+|XYZ|
+|YCbCr|
 
 PixelBitDepthList
 
