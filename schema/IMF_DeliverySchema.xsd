@@ -217,7 +217,7 @@
                     <xs:element name="Colorimetry" minOccurs="0">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:pattern value="COLOR.1|COLOR.2|COLOR.3|COLOR.4|COLOR.5|COLOR.6|COLOR.7|COLOR.APP5.AP0|COLOR8.DPP"/>
+                                <xs:pattern value="COLOR.1|COLOR.2|COLOR.3|COLOR.4|COLOR.5|COLOR.6|COLOR.7|COLOR.APP5.AP0|COLOR.8DPP"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -231,7 +231,7 @@
                     <xs:element name="Quantization" minOccurs="0">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:pattern value="QE.1|QE.2|QE.APP4.1|QE.APP4.2"/>
+                                <xs:pattern value="QE.1|QE.2|QE.APP4.1"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
