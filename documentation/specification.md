@@ -158,15 +158,14 @@ The ValueList element contains one or more elements of the same type, describing
 
 ##### VirtualTrackList
 
-The VirtualTrackList element is an ordered list of VirtualTrack elements that represent the virtual tracks used in the composition in the exact order as they should appear in the CompositionPlaylist.
+The VirtualTrackList element is a list of elements derived from the abstract GenericVirtualTrackType type. These elements represent the virtual tracks that must exist in the CompositionPlaylist. In the absence of further indication, the order of the elements in the list is meaningless.
 
-##### VirtualTrack
+The following concrete virtual tracks can be used:
 
-The VirtualTrack element describes the kind of track as well as the track essence properties.
-
-##### Kind
-
-The Kind element represents the class that the virtual track belongs to. The values of the Kind element use the exact name of the element used in the CompositionPlaylist to signal the virtual track (e.g. MainImageSequence for the main image virtual track, MainAudioSequence for the audio tracks, etc).
+|Element|Definition  |
+|-------|------------|
+|ImageVirtualTrack|defines a MainImageSequence virtual track in the CompositionPlaylist  |
+|AudioVirtualTrack|defines a MainAudioSequence virtual track in the CompositionPlaylist  |
 
 ##### TimelineComplexity
 
