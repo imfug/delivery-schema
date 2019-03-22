@@ -149,7 +149,7 @@ The MatchType element defines the matching algorithm to be used to values availa
 
 |Value|Meaning|
 |-----|-------|
-|exlcusive | one and only one value must be present|
+|exclusive | one and only one value must be present|
 |inclusive | one or more values may be present|
 
 ##### ValueList
