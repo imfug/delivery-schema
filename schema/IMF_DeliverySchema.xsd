@@ -59,7 +59,9 @@
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="ImageVirtualTrack" type="dsl:ImageVirtualTrackType" minOccurs="0" maxOccurs="1"/>
+                                    <xs:element name="MarkerVirtualTrack" type="dsl:MarkerVirtualTrackType" minOccurs="0" maxOccurs="1"/>
                                     <xs:element name="AudioVirtualTrack" type="dsl:AudioVirtualTrackType" minOccurs="0" maxOccurs="unbounded"/>
+                                    <xs:element name="DataEssenceVirtualTrack" type="dsl:DataEssenceVirtualTrackType" minOccurs="0" maxOccurs="unbounded"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
@@ -69,10 +71,11 @@
         </xs:sequence>
     </xs:complexType>
     <!-- - -->
-    <!-- Abstract base class containing all common properties for a VirtualTrack -->
+    <!-- Abstract base class containing common properties for Virtual Tracks -->
     <xs:complexType name="GenericVirtualTrackType" abstract="true">
         <xs:sequence>
-            <xs:element name="EssenceEncoding" type="xs:string"/>
+            <!-- Essence Encoding is not defined for Marker and DataEssence Virtual Tracks -->
+            <xs:element name="EssenceEncoding" type="xs:string" minOccurs="0"/>
             <!-- prototype: essence encoding constraints -->
             <xs:element name="EssenceEncodingConstraintList" minOccurs="0">
                 <xs:complexType>
@@ -152,7 +155,7 @@
         </xs:attribute>
     </xs:complexType>
     <!-- - -->
-    <!-- AudioVirtualTrack extends the GenericVirtualTrackType-->
+    <!-- AudioVirtualTrack extends GenericVirtualTrackType-->
     <xs:complexType name="AudioVirtualTrackType">
         <xs:complexContent>
             <xs:extension base="dsl:GenericVirtualTrackType">
@@ -209,7 +212,7 @@
         </xs:complexContent>
     </xs:complexType>
     <!-- - -->
-    <!-- ImageVirtualTrack extends the SingleVirtualTrack-->
+    <!-- ImageVirtualTrack extends GenericVirtualTrackType-->
     <xs:complexType name="ImageVirtualTrackType">
         <xs:complexContent>
             <xs:extension base="dsl:GenericVirtualTrackType">
@@ -308,4 +311,51 @@
             </xs:element>
         </xs:sequence>
     </xs:complexType>
+<!-- MarkerVirtualTrack -->
+    <xs:complexType name="MarkerVirtualTrackType">
+        <xs:complexContent>
+            <xs:extension base="dsl:GenericVirtualTrackType">
+                <xs:sequence>
+                    <xs:element name="MarkerList" minOccurs="0">
+                        <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="Marker" maxOccurs="unbounded">
+                                  <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                          <xs:pattern value="FFBT|FFCB|FFCL|FFDL|FFEC|FFHS|FFMC|FFOB|FFOC|FFOI|FFSP|FFTC|FFTS|FTXC|FTXE|FTXM|LFBT|LFCB|LFCL|LFDL|LFEC|LFHS|LFMC|LFOB|LFOC|LFOI|LFSP|LFTC|LFTS|LTXC|LTXE|LTXM|FPCI|FFCO|LFCO|FFOA|LFOA|FFDC|LFDC"/>
+                                      </xs:restriction>
+                                  </xs:simpleType>
+                              </xs:element>
+                          </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+<!-- - -->
+<!-- DataEssenceVirtualTrack extends GenericVirtualTrackType-->
+    <xs:complexType name="DataEssenceVirtualTrackType">
+        <xs:complexContent>
+            <xs:extension base="dsl:GenericVirtualTrackType">
+                <xs:sequence>
+                    <xs:element name="DataEssenceSequenceType" maxOccurs="1">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="SubtitlesSequence|HearingImpairedCaptionsSequence|VisuallyImpairedTextSequence|CommentarySequence|KaraokeSequence"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="NamespaceURI" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:anyURI">
+                                <xs:pattern value="http://www.w3.org/ns/ttml/profile/imsc1/text|http://www.w3.org/ns/ttml/profile/imsc1/image"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+<!-- - -->
 </xs:schema>
