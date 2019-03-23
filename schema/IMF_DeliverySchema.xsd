@@ -61,7 +61,7 @@
                                     <xs:element name="ImageVirtualTrack" type="dsl:ImageVirtualTrackType" minOccurs="0" maxOccurs="1"/>
                                     <xs:element name="MarkerVirtualTrack" type="dsl:MarkerVirtualTrackType" minOccurs="0" maxOccurs="1"/>
                                     <xs:element name="AudioVirtualTrack" type="dsl:AudioVirtualTrackType" minOccurs="0" maxOccurs="unbounded"/>
-                                    <xs:element name="DataEssenceVirtualTrack" type="dsl:DataEssenceVirtualTrackType" minOccurs="0" maxOccurs="unbounded"/>
+                                    <xs:element name="TimedTextVirtualTrack" type="dsl:TimedTextVirtualTrackType" minOccurs="0" maxOccurs="unbounded"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
@@ -354,12 +354,12 @@
         </xs:complexContent>
     </xs:complexType>
 <!-- - -->
-<!-- DataEssenceVirtualTrack extends GenericVirtualTrackType-->
-    <xs:complexType name="DataEssenceVirtualTrackType">
+<!-- TimedTextVirtualTrack extends GenericVirtualTrackType-->
+    <xs:complexType name="TimedTextVirtualTrackType">
         <xs:complexContent>
             <xs:extension base="dsl:GenericVirtualTrackType">
                 <xs:sequence>
-                    <xs:element name="DataEssenceSequenceType" maxOccurs="1">
+                    <xs:element name="TimedTextSequenceType" maxOccurs="1">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
                                 <xs:pattern value="SubtitlesSequence|HearingImpairedCaptionsSequence|VisuallyImpairedTextSequence|CommentarySequence|KaraokeSequence"/>

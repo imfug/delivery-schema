@@ -141,10 +141,10 @@
                             <SampleRate>48000 1</SampleRate>
                         </SampleRateList>
                     </AudioVirtualTrack>
-                    <DataEssenceVirtualTrack>
-                        <DataEssenceSequenceType>SubtitlesSequence</DataEssenceSequenceType>
+                    <TimedTextVirtualTrack>
+                        <TimedTextSequenceType>SubtitlesSequence</TimedTextSequenceType>
                         <NamespaceURI>http://www.w3.org/ns/ttml/profile/imsc1/text</NamespaceURI>
-                    </DataEssenceVirtualTrack>
+                    </TimedTextVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
         </Deliverable>
