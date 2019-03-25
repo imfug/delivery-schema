@@ -31,22 +31,22 @@ TBD
 
 ## Normative References
 
-SMPTE ST 2067-2 Interoperable Master Format - Core Constraints
-SMPTE ST 2067-3 Interoperable Master Format - Composition Playlist
-SMPTE ST 2067-5 Interoperable Master Format - Essence Component
-SMPTE ST 2067-8 Interoperable Master Format - Common Audio Labels
+1. SMPTE ST 2067-2 Interoperable Master Format - Core Constraints
+2. SMPTE ST 2067-3 Interoperable Master Format - Composition Playlist
+3. SMPTE ST 2067-5 Interoperable Master Format - Essence Component
+4. SMPTE ST 2067-8 Interoperable Master Format - Common Audio Labels
 
-SMPTE ST 2067-20 Interoperable Master Format - Application #2
-SMPTE ST 2067-21 Interoperable Master Format - Application #2E
-SMPTE ST 2067-30 Interoperable Master Format - Application #3
-SMPTE ST 2067-40 Interoperable Master Format - Application #4 Cinema Mezzanine
-SMPTE ST 2067-50 Interoperable Master Format - Application #5 ACES
+5. SMPTE ST 2067-20 Interoperable Master Format - Application #2
+6. SMPTE ST 2067-21 Interoperable Master Format - Application #2E
+7. SMPTE ST 2067-30 Interoperable Master Format - Application #3
+8. SMPTE ST 2067-40 Interoperable Master Format - Application #4 Cinema Mezzanine
+9. SMPTE ST 2067-50 Interoperable Master Format - Application #5 ACES
 
-SMPTE ST 2067-100 Interoperable Master Format - Output Profile List
-SMPTE ST 2067-102 Interoperable Master Format - Common Image Pixel Color Schemes
-SMPTE ST 2067-103 Interoperable Master Format - Output Profile List - Common Audio Definition and Macros
+10. SMPTE ST 2067-100 Interoperable Master Format - Output Profile List
+11. SMPTE ST 2067-102 Interoperable Master Format - Common Image Pixel Color Schemes
+12. SMPTE ST 2067-103 Interoperable Master Format - Output Profile List - Common Audio Definition and Macros
 
-SMPTE RDD 45-2017 Interoperable Master Format - Apple ProRes
+13. SMPTE RDD 45-2017 Interoperable Master Format - Apple ProRes
 
 ## Glossary
 
