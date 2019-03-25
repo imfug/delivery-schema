@@ -162,10 +162,12 @@ The VirtualTrackList element is a list of elements derived from the abstract Gen
 
 The following concrete virtual tracks can be used:
 
-|Element|Definition  |
-|-------|------------|
-|ImageVirtualTrack|defines a MainImageSequence virtual track in the CompositionPlaylist  |
-|AudioVirtualTrack|defines a MainAudioSequence virtual track in the CompositionPlaylist  |
+|Element                |Definition                                                            |
+|-----------------------|----------------------------------------------------------------------|
+| ImageVirtualTrack     | defines a MainImageSequence virtual track in the CompositionPlaylist |
+| AudioVirtualTrack     | defines a MainAudioSequence virtual track in the CompositionPlaylist |
+| MarkerVirtualTrack    | defines a MarkerSequence virtual track in the CompositionPlaylist    |
+| TimedTextVirtualTrack | defines a timed-text virtual track in the CompositionPlaylist        |
 
 ##### TimelineComplexity
 
