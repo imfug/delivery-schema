@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <Id>urn:uuid:a0ce8ee4-c2b1-40eb-a14d-590429c3427d</Id>
+    <Id>urn:uuid:7c53d56d-9d82-4789-884e-5bb91c21f209</Id>
     <AnnotationText>DRAFT Netflix Original Specification UHD/4K 3.0</AnnotationText>
     <IssueDate>2019-01-27T00:00:00-00:00</IssueDate>
     <Issuer>Netflix</Issuer>
     <Creator>Florian Schleich - fschleich@netflix.com</Creator>
     <DeliverableList>
         <Deliverable>
-            <Id>urn:uuid:2de435ae-0fec-f668-423a-40155d88c6e8</Id>
+            <Id>urn:uuid:ae419a7e-ef83-4dc2-b56f-bdb11d4a0240</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR YCC</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest01</OwnerId>
@@ -23,7 +23,6 @@
                </SegmentCardinality>
                 <VirtualTrackList>
                     <ImageVirtualTrack>
-                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -38,6 +37,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
                         <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:2:2</Sampling>
                         <Quantization>QE.1</Quantization>
@@ -62,7 +62,6 @@
                         </FrameRateList>
                     </ImageVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -77,6 +76,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>LtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -93,7 +93,6 @@
                         </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -108,6 +107,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -139,7 +139,7 @@
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
-            <Id>urn:uuid:323b4ff3-e82b-3174-dc3f-f1b3048887d5</Id>
+            <Id>urn:uuid:a72aa4ee-4165-4845-adb9-592c1c708e69</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR YCC HFR</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest02</OwnerId>
@@ -151,7 +151,6 @@
                 </ApplicationIdentificationList>
                 <VirtualTrackList>
                     <ImageVirtualTrack>
-                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M7S4</EssenceEncoding>
                          <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -166,7 +165,8 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
-                       <Colorimetry>COLOR.3</Colorimetry>
+                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M7S4</EssenceEncoding>
+                        <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:2:2</Sampling>
                         <Quantization>QE.1</Quantization>
                         <FrameStructure>Progressive</FrameStructure>
@@ -188,7 +188,6 @@
                         </FrameRateList>
                     </ImageVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -203,6 +202,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>LtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -219,7 +219,6 @@
                         </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -234,6 +233,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -265,7 +265,7 @@
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
-            <Id>urn:uuid:eec3881b-1869-2c45-46a9-94c60767fc10</Id>
+            <Id>urn:uuid:ca112a41-526a-41aa-9419-17eeeecc65a5</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR RGB</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest03</OwnerId>
@@ -277,7 +277,6 @@
                 </ApplicationIdentificationList>
                 <VirtualTrackList>
                     <ImageVirtualTrack>
-                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -292,6 +291,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
                         <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:4:4</Sampling>
                         <Quantization>QE.2</Quantization>
@@ -317,7 +317,6 @@
                         </FrameRateList>
                     </ImageVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -332,6 +331,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>LtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -348,7 +348,6 @@
                         </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
-                       <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -363,6 +362,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                        <SoundfieldGroupConfiguration>
                             <MCATagSymbol>51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -394,7 +394,7 @@
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
-            <Id>urn:uuid:825094a9-46bd-7862-037e-7a72a34d598a</Id>
+            <Id>urn:uuid:c1e014b2-d330-49ad-bfb0-fad0da057366</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR RGB HFR</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest04</OwnerId>
@@ -406,7 +406,6 @@
                 </ApplicationIdentificationList>
                 <VirtualTrackList>
                     <ImageVirtualTrack>
-                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M7S4</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -421,6 +420,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M7S4</EssenceEncoding>
                         <Colorimetry>COLOR.3</Colorimetry>
                         <Sampling>4:4:4</Sampling>
                         <Quantization>QE.2</Quantization>
@@ -444,7 +444,6 @@
                         </FrameRateList>
                     </ImageVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -459,6 +458,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>LtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -475,7 +475,6 @@
                         </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -490,6 +489,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
