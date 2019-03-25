@@ -225,7 +225,7 @@
                     <xs:element name="EssenceEncoding">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:pattern value="JPEG2000BroadcastContributionSingleTileProfileLevel[1-7]|
+                                <xs:pattern value="JPEG2000BroadcastContributionSingleTileProfileLevel[1-5]|JPEG2000BroadcastContributionMultiTileReversibleProfileLevel[6-7]|
                                     |J2K_2KIMF_SingleTileLossyProfile_M[1-6]S1|J2K_2KIMF_SingleTileLossyProfile_M[4-6]S2|J2K_2KIMF_SingleTileLossyProfile_M[5-6]S3|J2K_2KIMF_SingleTileLossyProfile_M6S4
                                     |J2K_4KIMF_SingleTileLossyProfile_M[1-8]S1|J2K_4KIMF_SingleTileLossyProfile_M[4-8]S2|J2K_4KIMF_SingleTileLossyProfile_M[5-8]S3|J2K_4KIMF_SingleTileLossyProfile_M[6-8]S4|J2K_4KIMF_SingleTileLossyProfile_M[7-8]S5|J2K_4KIMF_SingleTileLossyProfile_M8S6|
                                     |J2K_2KIMF_SingleMultiTileReversibleProfile_M[1-6]S0|
