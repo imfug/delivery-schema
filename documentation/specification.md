@@ -31,7 +31,22 @@ TBD
 
 ## Normative References
 
-TBD  
+1. SMPTE ST 2067-2 Interoperable Master Format - Core Constraints
+2. SMPTE ST 2067-3 Interoperable Master Format - Composition Playlist
+3. SMPTE ST 2067-5 Interoperable Master Format - Essence Component
+4. SMPTE ST 2067-8 Interoperable Master Format - Common Audio Labels
+
+5. SMPTE ST 2067-20 Interoperable Master Format - Application #2
+6. SMPTE ST 2067-21 Interoperable Master Format - Application #2E
+7. SMPTE ST 2067-30 Interoperable Master Format - Application #3
+8. SMPTE ST 2067-40 Interoperable Master Format - Application #4 Cinema Mezzanine
+9. SMPTE ST 2067-50 Interoperable Master Format - Application #5 ACES
+
+10. SMPTE ST 2067-100 Interoperable Master Format - Output Profile List
+11. SMPTE ST 2067-102 Interoperable Master Format - Common Image Pixel Color Schemes
+12. SMPTE ST 2067-103 Interoperable Master Format - Output Profile List - Common Audio Definition and Macros
+
+13. SMPTE RDD 45-2017 Interoperable Master Format - Apple ProRes
 
 ## Glossary
 
@@ -162,10 +177,12 @@ The VirtualTrackList element is a list of elements derived from the abstract Gen
 
 The following concrete virtual tracks can be used:
 
-|Element|Definition  |
-|-------|------------|
-|ImageVirtualTrack|defines a MainImageSequence virtual track in the CompositionPlaylist  |
-|AudioVirtualTrack|defines a MainAudioSequence virtual track in the CompositionPlaylist  |
+|Element                |Definition                                                            |
+|-----------------------|----------------------------------------------------------------------|
+| ImageVirtualTrack     | defines a MainImageSequence virtual track in the CompositionPlaylist |
+| AudioVirtualTrack     | defines a MainAudioSequence virtual track in the CompositionPlaylist |
+| MarkerVirtualTrack    | defines a MarkerSequence virtual track in the CompositionPlaylist    |
+| TimedTextVirtualTrack | defines a timed-text virtual track in the CompositionPlaylist        |
 
 ##### TimelineComplexity
 
