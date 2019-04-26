@@ -23,7 +23,6 @@
                </SegmentCardinality>
                 <VirtualTrackList>
                     <ImageVirtualTrack>
-                        <EssenceEncoding>ProResPictureCoding422HQ</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -38,6 +37,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>ProResPictureCoding422HQ</EssenceEncoding>
                         <Colorimetry>COLOR.8DPP</Colorimetry>
                         <Sampling>4:2:2</Sampling>
                         <Quantization>QE.1</Quantization>
@@ -59,7 +59,6 @@
                         </FrameRateList>
                     </ImageVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -74,6 +73,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>LtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
@@ -90,7 +90,6 @@
                         </SampleRateList>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
-                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <TimelineComplexity type="explicit">
                             <Sequence>
                                 <Cardinality>
@@ -105,6 +104,7 @@
                                 </Resource>
                             </Sequence>
                         </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
                             <MCATagSymbol>51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
