@@ -97,6 +97,7 @@
                         <SampleRateList>
                             <SampleRate>48000 1</SampleRate>
                         </SampleRateList>
+                        <RFC5646SpokenLanguage>de-DE</RFC5646SpokenLanguage>
                     </AudioVirtualTrack>
                     <AudioVirtualTrack>
                         <TimelineComplexity type="explicit">
@@ -140,10 +141,13 @@
                         <SampleRateList>
                             <SampleRate>48000 1</SampleRate>
                         </SampleRateList>
+                        <RFC5646SpokenLanguage>de-DE</RFC5646SpokenLanguage>
                     </AudioVirtualTrack>
                     <TimedTextVirtualTrack>
                         <TimedTextSequenceType>SubtitlesSequence</TimedTextSequenceType>
                         <NamespaceURI>http://www.w3.org/ns/ttml/profile/imsc1/text</NamespaceURI>
+                        <!-- The RFC5646LanguageTagList value is meant to illustrate allowed values  -->
+                        <RFC5646LanguageTagList>de-DE,en,es-419</RFC5646LanguageTagList>
                     </TimedTextVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>

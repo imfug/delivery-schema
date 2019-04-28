@@ -138,13 +138,6 @@
                     </xs:attribute>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="ReferenceCardinality" minOccurs="0">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="Sequence" type="dsl:CardinalityType"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
         </xs:sequence>
         <xs:attribute name="namespace">
             <xs:simpleType>
@@ -211,6 +204,14 @@
                                 </xs:element>
                             </xs:sequence>
                         </xs:complexType>
+                    </xs:element>
+                    <xs:element name="RFC5646SpokenLanguage" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <!-- The pattern restricts the language tag to consist of either a language or a language and a region, as defined in RFC 5646 -->
+                                <xs:pattern value="[a-zA-Z]{2}(-[a-zA-Z]{2}|-[0-9]{3}){0,1}"/>
+                            </xs:restriction>
+                        </xs:simpleType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -369,6 +370,14 @@
                         <xs:simpleType>
                             <xs:restriction base="xs:anyURI">
                                 <xs:pattern value="http://www.w3.org/ns/ttml/profile/imsc1/text|http://www.w3.org/ns/ttml/profile/imsc1/image"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="RFC5646LanguageTagList" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <!-- The pattern constrains the language tags to consist of either a language or a language and a region, as defined in RFC 5646 -->
+                                <xs:pattern value="([a-zA-Z]{2}(-[a-zA-Z]{2}|-[0-9]{3}){0,1},)*[a-zA-Z]{2}(-[a-zA-Z]{2}|-[0-9]{3}){0,1}"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
