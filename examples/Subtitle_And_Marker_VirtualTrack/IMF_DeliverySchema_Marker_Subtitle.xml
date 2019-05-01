@@ -146,8 +146,18 @@
                     <TimedTextVirtualTrack>
                         <TimedTextSequenceType>SubtitlesSequence</TimedTextSequenceType>
                         <NamespaceURI>http://www.w3.org/ns/ttml/profile/imsc1/text</NamespaceURI>
-                        <!-- The RFC5646LanguageTagList value is meant to illustrate allowed values  -->
-                        <RFC5646LanguageTagList>de-DE,en,es-419</RFC5646LanguageTagList>
+                        <RFC5646LanguageTagListConstraints>
+                            <!-- Option 1: Explicitely specify a list of language tags to be present in RFC5646LanguageTagList -->
+                            <RFC5646LanguageTagList>de-DE,en,es-419</RFC5646LanguageTagList>
+                        </RFC5646LanguageTagListConstraints>
+                    </TimedTextVirtualTrack>
+                    <TimedTextVirtualTrack>
+                        <TimedTextSequenceType>SubtitlesSequence</TimedTextSequenceType>
+                        <NamespaceURI>http://www.w3.org/ns/ttml/profile/imsc1/text</NamespaceURI>
+                        <RFC5646LanguageTagListConstraints>
+                            <!-- Option 2: SpecifyRFC5646LanguageTagList has to be present  -->
+                            <RFC5646LanguageTagListPresent>true</RFC5646LanguageTagListPresent>
+                        </RFC5646LanguageTagListConstraints>
                     </TimedTextVirtualTrack>
                 </VirtualTrackList>
             </CompositionPlaylistConstraints>
