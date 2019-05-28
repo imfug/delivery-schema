@@ -138,13 +138,6 @@
                     </xs:attribute>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="ReferenceCardinality" minOccurs="0">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="Sequence" type="dsl:CardinalityType"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
         </xs:sequence>
         <xs:attribute name="namespace">
             <xs:simpleType>
@@ -211,6 +204,14 @@
                                 </xs:element>
                             </xs:sequence>
                         </xs:complexType>
+                    </xs:element>
+                    <xs:element name="RFC5646SpokenLanguage" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <!-- The pattern restricts the language tag to consist of either a language or a language and a region, as defined in RFC 5646 -->
+                                <xs:pattern value="[a-zA-Z]{2}(-[a-zA-Z]{2}|-[0-9]{3}){0,1}"/>
+                            </xs:restriction>
+                        </xs:simpleType>
                     </xs:element>
                 </xs:sequence>
             </xs:extension>
@@ -372,9 +373,27 @@
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
+                    <xs:element name="RFC5646LanguageTagListConstraints" type="dsl:RFC5646LanguageTagListConstraintsType" minOccurs="0">
+                    </xs:element>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+<!-- - -->
+   <xs:complexType name="RFC5646LanguageTagListConstraintsType">
+       <xs:sequence>
+           <xs:choice>
+               <xs:element name="RFC5646LanguageTagList" type="dsl:RFC5646LanguageTagListType"/>
+               <xs:element name="RFC5646LanguageTagListPresent" type="xs:boolean"/>
+           </xs:choice>
+       </xs:sequence>
+   </xs:complexType>
+<!-- - -->
+   <xs:simpleType name="RFC5646LanguageTagListType">
+       <xs:restriction base="xs:string">
+           <!-- The pattern constrains the language tags to consist of either a language or a language and a region, as defined in RFC 5646 -->
+           <xs:pattern value="([a-zA-Z]{2}(-[a-zA-Z]{2}|-[0-9]{3}){0,1},)*[a-zA-Z]{2}(-[a-zA-Z]{2}|-[0-9]{3}){0,1}"/>
+       </xs:restriction>
+   </xs:simpleType>
 <!-- - -->
 </xs:schema>
