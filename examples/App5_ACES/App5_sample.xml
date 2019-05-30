@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Id>urn:uuid:e478c717-db14-4100-8674-8d76a988920e</Id>
+    <AnnotationText>Example for an App#5 ST 2067-50 delivery spec document</AnnotationText>
+    <IssueDate>2019-05-30T00:00:00-00:00</IssueDate>
+    <Issuer>Netflix</Issuer>
+    <Creator>Wolfgang Ruppel, imftool@t-online.de</Creator>
+    <DeliverableList>
+        <Deliverable>
+            <Id>urn:uuid:5d8fb056-5c16-41f7-9b07-8762dd71ed74</Id>
+            <Label>ST 2067-50 App#5 ACES deliverable with a 5.1 audio virtual track</Label>
+            <CompositionPlaylistConstraints>
+                <OwnerId>Wolfgang Ruppel</OwnerId>
+                <ApplicationIdentificationList>
+                    <MatchType>exclusive</MatchType>
+                    <ValueList>
+                        <ApplicationIdentification>http://www.smpte-ra.org/ns/2067-50/2017</ApplicationIdentification>
+                    </ValueList>
+                </ApplicationIdentificationList>
+               <SegmentCardinality>
+                   <MinItem>1</MinItem>
+                   <MaxItem>1</MaxItem>
+               </SegmentCardinality>
+                <VirtualTrackList>
+                    <ImageVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>ACESUncompressedMonoscopicWithoutAlpha</EssenceEncoding>
+                        <Colorimetry>COLOR.APP5.AP0</Colorimetry>
+                        <Sampling>4:4:4</Sampling>
+                        <FrameStructure>Progressive</FrameStructure>
+                        <Stereoscopy>Monoscopic</Stereoscopy>
+                        <ColorComponents>RGB</ColorComponents>
+                        <ImageFrameWidthList>
+                            <ImageFrameWidth>4096</ImageFrameWidth>
+                            <ImageFrameWidth>2048</ImageFrameWidth>
+                            <ImageFrameWidth>3840</ImageFrameWidth>
+                            <ImageFrameWidth>1920</ImageFrameWidth>
+                        </ImageFrameWidthList>
+                        <ImageFrameHeightList>
+                            <ImageFrameHeight>3112</ImageFrameHeight>
+                            <ImageFrameHeight>2160</ImageFrameHeight>
+                            <ImageFrameHeight>1080</ImageFrameHeight>
+                        </ImageFrameHeightList>
+                        <FrameRateList>
+                            <FrameRate>24000 1001</FrameRate>
+                            <FrameRate>24 1</FrameRate>
+                            <FrameRate>25 1</FrameRate>
+                            <FrameRate>30000 1001</FrameRate>
+                            <FrameRate>30 1</FrameRate>
+                        </FrameRateList>
+                    </ImageVirtualTrack>
+                    <AudioVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
+                        <SoundfieldGroupConfiguration>
+                            <MCATagSymbol>51</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
+                        <AudioChannelMapping>
+                            <AudioChannel>
+                                <MCATagSymbol>L</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>R</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>C</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>LFE</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>Ls</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>Rs</MCATagSymbol>
+                            </AudioChannel>
+                        </AudioChannelMapping>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
+                    </AudioVirtualTrack>
+                </VirtualTrackList>
+            </CompositionPlaylistConstraints>
+        </Deliverable>
+    </DeliverableList>
+</DeliverySpecificationList>
