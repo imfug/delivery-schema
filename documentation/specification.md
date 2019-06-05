@@ -1,31 +1,11 @@
 
 # IMF Delivery Specification List
 
-## History
-
-|Date       |Author     |Change|
-|-----------|-----------|------|
-|2018-05-12 | Dan Tatut | Initial draft|
-|2018-08-13 | Dan Tatut | Initial ASCIIdoc version|
-|2019-03-13 | Dan Tatut | Initial Markdown version|
-
-## Foreword
-
-TBD  
-
-## Intellectual Property
-
-TBD  
-
 ## Introduction
 
 TBD  
 
 ## Scope
-
-TBD  
-
-## Conformance Notation
 
 TBD  
 
@@ -47,6 +27,8 @@ TBD
 12. SMPTE ST 2067-103 Interoperable Master Format - Output Profile List - Common Audio Definition and Macros
 
 13. SMPTE RDD 45-2017 Interoperable Master Format - Apple ProRes
+
+14. SMPTE ST 428-12-2013 D-Cinema - Distribution Master Common Audio Channels and Soundfield Groups
 
 ## Glossary
 
@@ -184,6 +166,8 @@ The following concrete virtual tracks can be used:
 | MarkerVirtualTrack    | defines a MarkerSequence virtual track in the CompositionPlaylist    |
 | TimedTextVirtualTrack | defines a timed-text virtual track in the CompositionPlaylist        |
 
+Please note that the VirtualTrackList can be empty, which implies that the Deliverable is not specifying any constrains on the virtual tracks in the CompositionPlaylist.
+
 ##### TimelineComplexity
 
 The TimelineComplexity element describes the cardinality and temporal constraints of its components.
@@ -224,7 +208,20 @@ The allowed values depend on the Application being targetted. The syntax of the 
 
 ##### COLOR.x
 
-where x is an alpha-numercial expression defined in the Application specification documents.
+where x is an alpha-numercial expression defined in the Application specification documents. Currently the following values are supported:
+
+|Value|Meaning|
+|-----|-------|
+|COLOR.1| as defined in ST2067-20, Table 3|
+|COLOR.2| as defined in ST2067-20, Table 3|
+|COLOR.3| as defined in ST2067-20, Table 3|
+|COLOR.4| as defined in ST2067-21, Table 4|
+|COLOR.5| as defined in ST2067-21, Table 4|
+|COLOR.6| as defined in ST2067-21, Table 4|
+|COLOR.7| as defined in ST2067-21, Table 4|
+|COLOR.APP5.AP0| as defined in ST2067-50, Table 3|
+|COLOR.8DPP| as defined in TSP2121-1, Table 2|
+|XYZ|missing ref.|
 
 ##### Sampling
 
