@@ -210,17 +210,17 @@ The allowed values depend on the Application being targetted. The syntax of the 
 
 where x is an alpha-numercial expression defined in the Application specification documents. Currently the following values are supported:
 
-|Value|Meaning|
+|Value|Definition|
 |-----|-------|
-|COLOR.1| as defined in ST2067-20, Table 3|
-|COLOR.2| as defined in ST2067-20, Table 3|
-|COLOR.3| as defined in ST2067-20, Table 3|
-|COLOR.4| as defined in ST2067-21, Table 4|
-|COLOR.5| as defined in ST2067-21, Table 4|
-|COLOR.6| as defined in ST2067-21, Table 4|
-|COLOR.7| as defined in ST2067-21, Table 4|
-|COLOR.APP5.AP0| as defined in ST2067-50, Table 3|
-|COLOR.8DPP| as defined in TSP2121-1, Table 2|
+|COLOR.1| see ST2067-20, Table 3|
+|COLOR.2| see ST2067-20, Table 3|
+|COLOR.3| see ST2067-20, Table 3|
+|COLOR.4| see ST2067-21, Table 4|
+|COLOR.5| see ST2067-21, Table 4|
+|COLOR.6| see ST2067-21, Table 4|
+|COLOR.7| see ST2067-21, Table 4|
+|COLOR.APP5.AP0| see ST2067-50, Table 3|
+|COLOR.8DPP| see TSP2121-1, Table 2|
 |XYZ|missing ref.|
 
 ##### Sampling
@@ -243,6 +243,11 @@ values shall use the following pattern:
 
 where x is an alpha-numercial value defined in the Application specification documents.
 
+|Value|Definition|
+|-----|-------|
+|QE.1| see ST2067-20, Table 4|
+|QE.2| see ST2067-20, Table 4|
+
 ##### FrameStructure
 
 The FrameStructure element definies the raster scanning method. Its value must be one of the following:
@@ -254,9 +259,12 @@ The FrameStructure element definies the raster scanning method. Its value must b
 
 ##### Stereoscopy
 
-```xml
-<Stereoscopy>Monoscopic</Stereoscopy>
-```
+The Stereoscopy element defines the monoscopic or stereoscopic nature of the essence referenced by the ImageVirtualTrack. The currently supported values are defined in the table below:
+
+|Value|Meaning|
+|-----|-------|
+|Monoscopic |The image track essence contains a single point-of-view, targeting both the left and right eyes.
+|Stereoscopic  |The image track essence contains two points-of-view, targeting the left and right eyes respectively.
 
 ##### ColorComponents
 
@@ -279,19 +287,27 @@ The PixelBitDepth defines the pixel bitdepth value for the deliverable
 
 ##### ImageFrameWidthList
 
-The ImageFrameWidthList contains one or more ImageFrameWidth elements that define the possible values for the image width.
+The ImageFrameWidthList contains one or more ImageFrameWidth elements that define the possible values for the image width. The ImageFrameWidthList element is optional. 
+
+If absent, then the Deliverable sets no constraints on the horizonal resolution of the essence referenced by the ImageVirtualTrack. In this case, the constraints defined by the Application identified by the ApplicationIdentification elements are applicable.
+
+If present, the Deliverable limits the horizontal resolution of the essence referenced by the ImageVirtualTrack to the values defined by the ImageFrameWidth elements.
 
 ##### ImageFrameWidth
 
-The ImageFrameWidth defines the intended display width.
+The ImageFrameWidth defines the intended display width, or horizontal resolution, in pixels. Please note that values that do not fall in the ranges defined by the Application identified by the ApplicationIdentification elements are not valid.
 
 ##### ImageFrameHeightList
 
-The ImageFrameHeightList contains one or more ImageFrameHeight elements that define the possible values for the image height.
+The ImageFrameHeightList contains one or more ImageFrameHeight elements that define the possible values for the image height. The ImageFrameHeightList element is optional. 
+
+If absent, then the Deliverable sets no constraints on the vertical resolution of the essence referenced by the ImageVirtualTrack. In this case, the constraints defined by the Application identified by the ApplicationIdentification elements are applicable.
+
+If present, the Deliverable limits the vertical resolution of the essence referenced by the ImageVirtualTrack to the values defined by the ImageFrameHeight elements.
 
 ##### ImageFrameHeight
 
-The ImageFrameHeight defines the intended display height.
+The ImageFrameHeight defines the intended display height, or vertical resolution, in pixels. Please note that values that do not fall in the ranges defined by the Application identified by the ApplicationIdentification elements are not valid.
 
 ##### FrameRateList
 
