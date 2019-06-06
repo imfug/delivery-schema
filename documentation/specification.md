@@ -120,6 +120,20 @@ The Deliverable element describes the various constraints that a deliverable sho
 
 The CompositionPlaylistConstraints element contains a collection of various elements describing constraints that are applicable to the Composition.
 
+##### OwnerId
+
+The OwnerId element is used by the creator/publisher/owner of the delivery specification
+to carry a globally unique identifier that is assigned to the deliverable. The unicity of 
+the identifier can be guaranteed by the owner using a variety of methods. 
+
+It is strongly recommended that the owner uses a DNS-based (Domain Name System) identifier 
+such as: 
+
+http://www.example.com/myDelivery_v1
+
+The OwnerId is used by information systems to uniquely identify the Deliverable. The handling of identifier collisions is beyond the scope of this specification.
+
+
 ##### ApplicationIdentificationList
 
 The ApplicationIdentificationList element contains a list of identifiers that a Composition conforms to.
