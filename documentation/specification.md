@@ -355,6 +355,19 @@ The MCATagSymbol element is a human readable mnemonic that uniquely identifies t
 
 An addistional constraint is applied to the list of possible values, based on the parent element (i.e. SoundfieldGroupConfiguration or AudioChannel).
 
+##### SampleRateList
+
+The SampleRateList contains one or more SampleRate elements that define the possible values for the audio sample rate.
+
+##### SampleRate   
+
+The SampleRate defines the intended audio sample rate. Currently only the following values are supported by the ST2067 family of standards:
+
+|Values|Meaning|
+|------|-------|
+|48000 1|	represents an audio sampling rate of 48kHz|
+|96000 1|	represents an audio sampling rate of 96kHz|
+
 ##### UCSEncoding
 
 TBD
