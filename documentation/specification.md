@@ -186,7 +186,7 @@ The following concrete virtual tracks can be used:
 | MarkerVirtualTrack    | defines a MarkerSequence virtual track in the CompositionPlaylist    |
 | TimedTextVirtualTrack | defines a timed-text virtual track in the CompositionPlaylist        |
 
-Please note that the VirtualTrackList can be empty, which implies that the Deliverable is not specifying any constrains on the virtual tracks in the CompositionPlaylist.
+*Note:* the VirtualTrackList can be empty, which implies that the Deliverable is not specifying any constrains on the virtual tracks in the CompositionPlaylist.
 
 ##### TimelineComplexity
 
