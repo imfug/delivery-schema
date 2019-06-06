@@ -281,6 +281,7 @@ The Quantization element defines the signal quantization system used to encode t
 |-----|-------|
 |QE.1| see ST2067-20, Table 4|
 |QE.2| see ST2067-20, Table 4|
+|QE.APP4.1| missing ref.|
 
 ##### FrameStructure
 
@@ -317,7 +318,16 @@ The PixelBitDepthList contains one or more PixelBitDepth elements that define th
 
 ##### PixelBitDepth
 
-The PixelBitDepth defines the pixel bitdepth value for the deliverable
+The PixelBitDepth defines the pixel bitdepth value for the deliverable. The table below lists the possible values for this element.
+
+|Values|
+|------|
+|8|	
+|10|
+|12|
+|16|
+
+*Note:* Not all Applications support all possible pixel bitdepths for all codecs. Please consult the specification of the target Application for the list of supported values.
 
 ##### ImageFrameWidthList
 
@@ -373,7 +383,7 @@ The routing destination is signaled via the MCATagSymbol child element.
 
 The MCATagSymbol element is a human readable mnemonic that uniquely identifies the audio channel or soundfield group. The values of the MCATagSymbol element are restricted to the list of values defined in SMPTE ST2067-8 and ST428-12.
 
-An addistional constraint is applied to the list of possible values, based on the parent element (i.e. SoundfieldGroupConfiguration or AudioChannel).
+An additional constraint is applied to the list of possible values, based on the parent element (i.e. SoundfieldGroupConfiguration or AudioChannel).
 
 ##### SampleRateList
 
