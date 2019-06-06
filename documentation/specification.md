@@ -188,6 +188,20 @@ The following concrete virtual tracks can be used:
 
 *Note:* the VirtualTrackList can be empty, which implies that the Deliverable is not specifying any constrains on the virtual tracks in the CompositionPlaylist.
 
+#### Virtual Tracks
+
+Virtual tracks are defined per kind of essence. All virtual track definitions are derived from a GenericVirtualTrackType which specifies a set of common properties, described in the following sections. Specialized virtual tracks (e.g. ImageVirtualtrack, AudioVirtualTrack, etc) have additional elements required to specify additional constraints on the essence they reference.
+
+#### Generic Virtual Track Elements
+
+##### EssenceEncodingConstraintList
+
+The EssenceEncodingConstraintList element is an optional list of EssenceEncodingConstraint designed to carry custom constraints. Each EssenceEncodingConstraintList is to be considered in a specific context defined by the scope attribute. The scope attribute is a generic URI that is entirely controlled by the entity which specifies the list of constraints. 
+
+##### EssenceEncodingConstraint
+
+Each EssenceEncodingConstraint element is defined by a name and a list of properties. Each property of the list is a Name/Value pair, each being defined as a string. Their values and use depend entirely on the specification represented by the scope attribute of the EssenceEncodingConstraintList.
+
 ##### TimelineComplexity
 
 The TimelineComplexity element describes the cardinality and temporal constraints of its components.
