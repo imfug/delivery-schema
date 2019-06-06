@@ -230,6 +230,10 @@ The MinItem element defines the minimum number of objects of a class.
 
 The MaxItem element defines the maximum number of objects of a class
 
+#### MarkerVirtualTrack
+
+#### ImageVirtualTrack
+
 ##### EssenceEncoding
 
 The EssenceEncoding element defines the encoding method and/or algorithm used to encode the essence used by a specific virtual track.
@@ -351,6 +355,8 @@ The FrameRateList contains one or more FrameRate elements that define the possib
 
 The FrameRate defines the intended video frame rate.
 
+#### AudioVirtualTrack
+
 ##### SoundfieldGroupConfiguration
 
 TBD
@@ -381,6 +387,8 @@ The SampleRate defines the intended audio sample rate. Currently only the follow
 |------|-------|
 |48000 1|	represents an audio sampling rate of 48kHz|
 |96000 1|	represents an audio sampling rate of 96kHz|
+
+#### TimedTextVirtualTrack
 
 ##### UCSEncoding
 
