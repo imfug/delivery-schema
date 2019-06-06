@@ -1,5 +1,5 @@
 
-# IMF Delivery Specification List
+# IMF Delivery Schema
 
 ## Introduction
 
@@ -355,15 +355,19 @@ The FrameRate defines the intended video frame rate.
 
 ##### SoundfieldGroupConfiguration
 
-TBD
+The SoundfieldGroupConfiguration element defines the soundfield configuration for the audio channels in the group. The configuration is signaled via the MCATagSymbol child element.
 
 ##### AudioChannelMapping
 
-TBD
+The AudioChannelMapping element is a list of ordered AudioChannel elements that explicit the audio channel layout in the soundfield group defined by the SoundfieldGroupConfiguration.
+
+The order in which the AudioChannel elements are listed must correspond to the order in which the actual channels appear in the trackfile.
 
 ##### AudioChannel
 
 The AudioChannel element defines the constraints on a single audio channel that participates in the soundfield group defined by the SoundfieldGroupConfiguration element.
+
+The routing destination is signaled via the MCATagSymbol child element.
 
 ##### MCATagSymbol
 
