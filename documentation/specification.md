@@ -232,6 +232,8 @@ The MaxItem element defines the maximum number of objects of a class
 
 #### Marker Virtual Track Elements
 
+TBD
+
 #### Image Virtual Track Elements
 
 ##### EssenceEncoding
@@ -240,11 +242,11 @@ The EssenceEncoding element defines the encoding method and/or algorithm used to
 
 ##### Colorimetry
 
-The Colorimetry element defines the combination of Color Primaries, Transfer Characteristic and potentially Coding Equations to be used for describing the color information in a Trackfile
+The Colorimetry element defines the combination of Color Primaries, Transfer Characteristic and potentially Coding Equations to be used for describing the color information in a Trackfile.
 
 The allowed values depend on the Application being targetted. The syntax of the values shall use the following pattern:
 
-##### COLOR.x
+###### COLOR.x
 
 where x is an alpha-numercial expression defined in the Application specification documents. Currently the following values are supported:
 
@@ -273,13 +275,7 @@ The Sampling element defines the sampling of the color components in the image e
 
 ##### Quantization
 
-The Quantization element defines the signal quantization system used to encode the normalized signal values into code values. The allowed values depend on the Application being targetted. The syntax of the 
-
-values shall use the following pattern:
-
-##### QE.x
-
-where x is an alpha-numercial value defined in the Application specification documents.
+The Quantization element defines the signal quantization system used to encode the normalized signal values into code values. The allowed values depend on the Application being targetted and they are listed in the table below:
 
 |Value|Definition|
 |-----|-------|
