@@ -347,11 +347,13 @@ TBD
 
 ##### AudioChannel
 
-TBD
+The AudioChannel element defines the constraints on a single audio channel that participates in the soundfield group defined by the SoundfieldGroupConfiguration element.
 
 ##### MCATagSymbol
 
-TBD
+The MCATagSymbol element is a human readable mnemonic that uniquely identifies the audio channel or soundfield group. The values of the MCATagSymbol element are restricted to the list of values defined in SMPTE ST2067-8 and ST428-12.
+
+An addistional constraint is applied to the list of possible values, based on the parent element (i.e. SoundfieldGroupConfiguration or AudioChannel).
 
 ##### UCSEncoding
 
