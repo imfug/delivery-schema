@@ -156,12 +156,18 @@ conforms. The specification for this element is defined in the following table:
 
 ##### MatchType
 
-The MatchType element defines the matching algorithm to be used to values available in a list. The following values are allowed
+The MatchType element defines the matching algorithm to be used to match values available in a list. The following values are allowed
 
 |Value|Meaning|
 |-----|-------|
 |exclusive | one and only one value must be present|
 |inclusive | one or more values may be present|
+
+For example, when using the MatchType with the ApplicationIdentification items in the ApplicationIdentificationList element, the following behavior is expected:
+
+MatchType is exclusive: among the values present in the list, only one of them can be present in the CPL. The CPL is expected to carry one and only one instance of ApplicationIdentification.
+
+MatchType is inclusive: one or more of the values listed can be present in the CPL. The CPL is expected to carry one or more instances of ApplicationIdentification.
 
 ##### ValueList
 
