@@ -230,9 +230,9 @@ The MinItem element defines the minimum number of objects of a class.
 
 The MaxItem element defines the maximum number of objects of a class
 
-#### MarkerVirtualTrack
+#### Marker Virtual Track Elements
 
-#### ImageVirtualTrack
+#### Image Virtual Track Elements
 
 ##### EssenceEncoding
 
@@ -355,7 +355,7 @@ The FrameRateList contains one or more FrameRate elements that define the possib
 
 The FrameRate defines the intended video frame rate.
 
-#### AudioVirtualTrack
+#### Audio Virtual Track Elements
 
 ##### SoundfieldGroupConfiguration
 
@@ -388,7 +388,7 @@ The SampleRate defines the intended audio sample rate. Currently only the follow
 |48000 1|	represents an audio sampling rate of 48kHz|
 |96000 1|	represents an audio sampling rate of 96kHz|
 
-#### TimedTextVirtualTrack
+#### Timed Text Virtual Track Elements
 
 ##### UCSEncoding
 
@@ -397,6 +397,8 @@ TBD
 ##### NamespaceURI
 
 TBD
+
+#### Digital Signature
 
 ##### Signer
 
