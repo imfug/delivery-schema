@@ -383,7 +383,7 @@ TBD
 
 This specification is accompanied by the following element, which is an XML schema document as specified in [XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/).
 
-##### imf-cpl-20160411.xsd
+The schema can be found [here](../schema/IMF_DeliverySchema.xsd)
 
 This element collects the XML schema definitions defined in this specification. It is informative and, in case of conflict, this specification takes precedence.
 
@@ -395,7 +395,7 @@ TBD
 
 This specification is accompanied by the following element, which is an XML document that contains a sample instance of the DeliverySpecificationList element.
 
-## Sample
+#### Sample
 
 [Netflix Original specification 3.0 UHD 4K HDR](../examples/Netflix/DRAFT_Netflix_OriginalsSpec_3.0_UHD_4K_SDR.xml)
 
