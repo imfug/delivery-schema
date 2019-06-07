@@ -1,5 +1,7 @@
 
 # IMF Delivery Schema
+#### Version 1.0
+#### Release Candidate #1
 
 ## Introduction
 
