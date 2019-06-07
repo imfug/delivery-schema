@@ -448,7 +448,14 @@ The ST2067 core constraints do no enforce the use of a single specific profile a
 
 ##### RFC5646LanguageTagListConstraints
 
-TBD
+The RFC5646LanguageTagListConstraints element is used to describe the constraints on the language or language and region on timed text virtual tracks. Language signaling is optional in timed text track files, however in practice it might be dsirable to enforce the presence of the language information or even enfore a specific language for a certain virtual track. Currently these contraints are implemented as a choice between two options, using the following child elements:
+
+|Values|Meaning|
+|------|------|
+|**RFC5646LanguageTagList**|A specific language or a language/region tag|
+|**RFC5646LanguageTagListPresent**|A simple "presence required" boolean flag|
+
+*Note:* the RFC5646LanguageTagListConstraints element is optional
 
 #### Digital Signature
 
