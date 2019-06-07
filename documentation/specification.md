@@ -238,7 +238,17 @@ TBD
 
 ##### EssenceEncoding
 
-The EssenceEncoding element defines the encoding method and/or algorithm used to encode the essence used by a specific virtual track.
+The EssenceEncoding element defines the encoding method used for the image samples in the referenced essence. The value of this element is represented by a SMPTE-RA picture encoding symbol.
+
+Currently the following encodings are supported:
+
+|Encodings|
+|-----|
+|JPEG 2000, Broadcast Contribution & IMF Profiles (2K, 4K & 8K), lossy or lossless|
+|Apple ProRes (RDD36, without alpha channel)|
+|ACES EXR (RGB with & without alpha channel)|
+
+The exact symbols that reflect the essence encoding are listed in the XML Schema.
 
 ##### Colorimetry
 
