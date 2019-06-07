@@ -406,6 +406,12 @@ Currently, the ST2067 family of standards only support uncompressed PCM samples.
 
 ###### MXFGCClipWrappedBroadcastWaveAudioData
 
+##### RFC5646SpokenLanguage
+
+The RFC5646SpokenLanguage element is used to specify the language or a language and a region required by the virtual track. The valid values and combinations are specified in RFC 5646.
+
+*Note:* the RFC5646SpokenLanguage is optional
+
 #### Timed Text Virtual Track Elements
 
 ##### TimedTextSequenceType
@@ -422,7 +428,13 @@ The TimedTextSequenceType element defines the kind of timed text referenced by t
 
 ##### NamespaceURI
 
-TBD
+The NamespaceURI element is used to signal the desired profile for the timed text documents wrapped in the trackfiles referenced by the virtual track. 
+
+The ST2067 family of standards require the use of IMSC (Internet Media Subtitles and Captions) documents for timed text. IMSC documents can have a variety of profiles (depending on the version), and come in two main categories: text-only and image-only. 
+
+The ST2067 core constraints do no enforce the use of a single specific profile across the trackfiles referenced by a single virtual track. However in practice it is desirable to limit the profile signaling to single specific value.
+
+*Note:* the NamespaceURI element is optional. If absent, any IMSC document that has a profile supported by the ST2067 family of standards can be used.
 
 ##### RFC5646LanguageTagListConstraints
 
