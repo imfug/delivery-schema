@@ -398,13 +398,33 @@ The SampleRate defines the intended audio sample rate. Currently only the follow
 |48000 1|	represents an audio sampling rate of 48kHz|
 |96000 1|	represents an audio sampling rate of 96kHz|
 
+##### EssenceEncoding
+
+The EssenceEncoding element defines the encoding method used for the audio samples in the referenced essence. The value of this element is represented by a SMPTE-RA sound encoding symbol.
+
+Currently, the ST2067 family of standards only support uncompressed PCM samples. The label defining such an encoding method is:
+
+###### MXFGCClipWrappedBroadcastWaveAudioData
+
 #### Timed Text Virtual Track Elements
 
-##### UCSEncoding
+##### TimedTextSequenceType
+
+The TimedTextSequenceType element defines the kind of timed text referenced by the virtual track. The following table contains the currently accepted values:
+
+|Values|
+|------|
+|SubtitlesSequence|
+|HearingImpairedCaptionsSequence|
+|VisuallyImpairedTextSequence|
+|CommentarySequence|
+|KaraokeSequence|
+
+##### NamespaceURI
 
 TBD
 
-##### NamespaceURI
+##### RFC5646LanguageTagListConstraints
 
 TBD
 
