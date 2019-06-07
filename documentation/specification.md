@@ -383,8 +383,6 @@ The SoundfieldGroupConfiguration element defines the soundfield configuration fo
 
 The AudioChannelMapping element is a list of ordered AudioChannel elements that explicit the audio channel layout in the soundfield group defined by the SoundfieldGroupConfiguration.
 
-The order in which the AudioChannel elements are listed must correspond to the order in which the actual channels appear in the trackfile.
-
 ##### AudioChannel
 
 The AudioChannel element defines the constraints on a single audio channel that participates in the soundfield group defined by the SoundfieldGroupConfiguration element.
@@ -437,16 +435,6 @@ The TimedTextSequenceType element defines the kind of timed text referenced by t
 |VisuallyImpairedTextSequence|
 |CommentarySequence|
 |KaraokeSequence|
-
-##### NamespaceURI
-
-The NamespaceURI element is used to signal the desired profile for the timed text documents wrapped in the trackfiles referenced by the virtual track. 
-
-The ST2067 family of standards require the use of IMSC (Internet Media Subtitles and Captions) documents for timed text. IMSC documents can have a variety of profiles (depending on the version), and come in two main categories: text-only and image-only. 
-
-The ST2067 core constraints do no enforce the use of a single specific profile across the trackfiles referenced by a single virtual track. However in practice it is desirable to limit the profile signaling to single specific value.
-
-*Note:* the NamespaceURI element is optional. If absent, any IMSC document that has a profile supported by the ST2067 family of standards can be used.
 
 ##### RFC5646LanguageTagListConstraints
 
