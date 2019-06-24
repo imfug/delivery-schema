@@ -399,7 +399,7 @@ The routing destination is signaled via the MCATagSymbol child element.
 
 ##### MCATagSymbol
 
-The MCATagSymbol element is a human readable mnemonic that uniquely identifies the audio channel or soundfield group. The values of the MCATagSymbol element are restricted to the list of values defined in SMPTE ST2067-8 and ST428-12.
+The MCATagSymbol element is a human readable mnemonic that uniquely identifies the audio channel or soundfield group. The values of the MCATagSymbol element are restricted to the list of values defined in SMPTE ST2067-8 and ST428-12. The symbols use prefixes specified in SMPTE ST2067-2.
 
 An additional constraint is applied to the list of possible values, based on the parent element (i.e. SoundfieldGroupConfiguration or AudioChannel).
 
