@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imfug.com/ns/delivery-schema/2019 IMF_DeliverySchema.xsd">
-    <Id>urn:uuid:7c53d56d-9d82-4789-884e-5bb91c21f209</Id>
+    <Id>urn:uuid:cc71c75d-2d6a-a51e-38fa-da11e71d581a</Id>
     <AnnotationText>DRAFT Netflix Original Specification UHD/4K 3.0</AnnotationText>
-    <IssueDate>2019-01-27T00:00:00-00:00</IssueDate>
+    <IssueDate>2019-07-10T00:00:00-00:00</IssueDate>
     <Issuer>Netflix</Issuer>
     <Creator>Florian Schleich - fschleich@netflix.com</Creator>
     <DeliverableList>
         <Deliverable>
-            <Id>urn:uuid:ae419a7e-ef83-4dc2-b56f-bdb11d4a0240</Id>
+            <Id>urn:uuid:3cb75242-727a-3673-6143-901d89e775f7</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR YCC</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest01</OwnerId>
@@ -139,7 +139,7 @@
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
-            <Id>urn:uuid:a72aa4ee-4165-4845-adb9-592c1c708e69</Id>
+            <Id>urn:uuid:af579c10-ae74-e479-c90e-d9f475d2aa27</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR YCC HFR</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest02</OwnerId>
@@ -265,7 +265,7 @@
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
-            <Id>urn:uuid:ca112a41-526a-41aa-9419-17eeeecc65a5</Id>
+            <Id>urn:uuid:874fbadc-3935-379f-2c0f-15e00cc93cbb</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR RGB</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest03</OwnerId>
@@ -394,7 +394,7 @@
             </CompositionPlaylistConstraints>
         </Deliverable>
         <Deliverable>
-            <Id>urn:uuid:c1e014b2-d330-49ad-bfb0-fad0da057366</Id>
+            <Id>urn:uuid:094efa02-2127-0393-8cbc-83795fbec7e2</Id>
             <Label>DRAFT Netflix Originals Delivery Specification UHD/4K 3.0 - SDR RGB HFR</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/30/4K_UHD_SDR/vectortest04</OwnerId>
