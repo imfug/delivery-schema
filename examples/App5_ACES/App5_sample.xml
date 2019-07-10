@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <Id>urn:uuid:e478c717-db14-4100-8674-8d76a988920e</Id>
+    <Id>urn:uuid:5d8598a3-c4c3-465f-b297-3fe12dbe87f6</Id>
     <AnnotationText>Example for an App#5 ST 2067-50 delivery spec document</AnnotationText>
-    <IssueDate>2019-05-30T00:00:00-00:00</IssueDate>
+    <IssueDate>2019-06-26T00:00:00-00:00</IssueDate>
     <Issuer>Netflix</Issuer>
     <Creator>Wolfgang Ruppel, imftool@t-online.de</Creator>
     <DeliverableList>
         <Deliverable>
-            <Id>urn:uuid:5d8fb056-5c16-41f7-9b07-8762dd71ed74</Id>
+            <Id>urn:uuid:4eb6a70e-2b9f-497a-bebf-6f3bdebb37c6</Id>
             <Label>ST 2067-50 App#5 ACES deliverable with a 5.1 audio virtual track</Label>
             <CompositionPlaylistConstraints>
                 <OwnerId>Wolfgang Ruppel</OwnerId>
@@ -79,26 +79,26 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>51</MCATagSymbol>
+                            <MCATagSymbol>sg51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>L</MCATagSymbol>
+                                <MCATagSymbol>chL</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>R</MCATagSymbol>
+                                <MCATagSymbol>chR</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>C</MCATagSymbol>
+                                <MCATagSymbol>chC</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>LFE</MCATagSymbol>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Ls</MCATagSymbol>
+                                <MCATagSymbol>chLs</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rs</MCATagSymbol>
+                                <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
