@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imfug.com/ns/delivery-schema/2019 IMF_DeliverySchema.xsd">
     <Id>urn:uuid:7c53d56d-9d82-4789-884e-5bb91c21f209</Id>
     <AnnotationText>DRAFT Netflix Original Specification UHD/4K 3.0</AnnotationText>
     <IssueDate>2019-01-27T00:00:00-00:00</IssueDate>
@@ -78,14 +78,14 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>LtRt</MCATagSymbol>
+                            <MCATagSymbol>sgLtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>Lt</MCATagSymbol>
+                                <MCATagSymbol>chLt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rt</MCATagSymbol>
+                                <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -109,26 +109,26 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>51</MCATagSymbol>
+                            <MCATagSymbol>sg51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>L</MCATagSymbol>
+                                <MCATagSymbol>chL</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>R</MCATagSymbol>
+                                <MCATagSymbol>chR</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>C</MCATagSymbol>
+                                <MCATagSymbol>chC</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>LFE</MCATagSymbol>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Ls</MCATagSymbol>
+                                <MCATagSymbol>chLs</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rs</MCATagSymbol>
+                                <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -204,14 +204,14 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>LtRt</MCATagSymbol>
+                            <MCATagSymbol>sgLtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>Lt</MCATagSymbol>
+                                <MCATagSymbol>chLt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rt</MCATagSymbol>
+                                <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -235,26 +235,26 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>51</MCATagSymbol>
+                            <MCATagSymbol>sg51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>L</MCATagSymbol>
+                                <MCATagSymbol>chL</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>R</MCATagSymbol>
+                                <MCATagSymbol>chR</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>C</MCATagSymbol>
+                                <MCATagSymbol>chC</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>LFE</MCATagSymbol>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Ls</MCATagSymbol>
+                                <MCATagSymbol>chLs</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rs</MCATagSymbol>
+                                <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -333,14 +333,14 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>LtRt</MCATagSymbol>
+                            <MCATagSymbol>sgLtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>Lt</MCATagSymbol>
+                                <MCATagSymbol>chLt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rt</MCATagSymbol>
+                                <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -364,26 +364,26 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                        <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>51</MCATagSymbol>
+                            <MCATagSymbol>sg51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>L</MCATagSymbol>
+                                <MCATagSymbol>chL</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>R</MCATagSymbol>
+                                <MCATagSymbol>chR</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>C</MCATagSymbol>
+                                <MCATagSymbol>chC</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>LFE</MCATagSymbol>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Ls</MCATagSymbol>
+                                <MCATagSymbol>chLs</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rs</MCATagSymbol>
+                                <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -460,14 +460,14 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>LtRt</MCATagSymbol>
+                            <MCATagSymbol>sgLtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>Lt</MCATagSymbol>
+                                <MCATagSymbol>chLt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rt</MCATagSymbol>
+                                <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -491,26 +491,26 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>51</MCATagSymbol>
+                            <MCATagSymbol>sg51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>L</MCATagSymbol>
+                                <MCATagSymbol>chL</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>R</MCATagSymbol>
+                                <MCATagSymbol>chR</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>C</MCATagSymbol>
+                                <MCATagSymbol>chC</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>LFE</MCATagSymbol>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Ls</MCATagSymbol>
+                                <MCATagSymbol>chLs</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rs</MCATagSymbol>
+                                <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
