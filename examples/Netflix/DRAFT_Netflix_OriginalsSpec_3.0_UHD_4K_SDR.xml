@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imfug.com/ns/delivery-schema/2019 IMF_DeliverySchema.xsd">
+<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Id>urn:uuid:cc71c75d-2d6a-a51e-38fa-da11e71d581a</Id>
     <AnnotationText>DRAFT Netflix Original Specification UHD/4K 3.0</AnnotationText>
     <IssueDate>2019-07-10T00:00:00-00:00</IssueDate>
