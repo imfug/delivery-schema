@@ -52,7 +52,6 @@
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
-                        <xs:element name="ApplicationIdentification" type="xs:anyURI" minOccurs="0"/>
                         <xs:element name="SegmentCardinality" type="dsl:CardinalityType" minOccurs="0">
                         </xs:element>
                         <xs:element name="VirtualTrackList">
@@ -117,11 +116,11 @@
                         <xs:element name="Sequence">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="Cardinality" type="dsl:CardinalityType" minOccurs="0" maxOccurs="1"/>
-                                    <xs:element name="Resource">
+                                    <xs:element name="Cardinality" type="dsl:CardinalityType" minOccurs="0"/>
+                                    <xs:element name="Resource" minOccurs="0">
                                         <xs:complexType>
                                             <xs:sequence>
-                                                <xs:element name="Cardinality" type="dsl:CardinalityType" minOccurs="0" maxOccurs="1"/>
+                                                <xs:element name="Cardinality" type="dsl:CardinalityType"/>
                                             </xs:sequence>
                                         </xs:complexType>
                                     </xs:element>
@@ -324,7 +323,7 @@
                     <xs:restriction base="xs:integer"/>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="MaxItem">
+            <xs:element name="MaxItem" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:integer"/>
                 </xs:simpleType>

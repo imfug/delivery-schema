@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Id>urn:uuid:a98452fb-0c80-f8df-7826-0fc80e1d434a</Id>
+    <AnnotationText>DRAFT Netflix Original Specification UHD 3.3</AnnotationText>
+    <IssueDate>2019-07-10T00:00:00-00:00</IssueDate>
+    <Issuer>Netflix</Issuer>
+    <Creator>Florian Schleich - fschleich@netflix.com</Creator>
+    <DeliverableList>
+        <Deliverable>
+            <Id>urn:uuid:580eb49e-aa4e-9b1d-d5db-43265b670647</Id>
+            <Label>DRAFT Netflix Originals Delivery Specification UHD 3.3 - SDR RGB</Label>
+            <CompositionPlaylistConstraints>
+                <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/33/UHD_SDR/vectortest01</OwnerId>
+                <ApplicationIdentificationList>
+                    <MatchType>exclusive</MatchType>
+                    <ValueList>
+                        <ApplicationIdentification>http://www.smpte-ra.org/schemas/2067-21/2016</ApplicationIdentification>
+                    </ValueList>
+                </ApplicationIdentificationList>
+                <VirtualTrackList>
+                    <ImageVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M6S3</EssenceEncoding>
+                        <Colorimetry>COLOR.3</Colorimetry>
+                        <Sampling>4:4:4</Sampling>
+                        <Quantization>QE.2</Quantization>
+                        <FrameStructure>Progressive</FrameStructure>
+                        <Stereoscopy>Monoscopic</Stereoscopy>
+                        <ColorComponents>RGB</ColorComponents>
+                        <PixelBitDepthList>
+                            <PixelBitDepth>10</PixelBitDepth>
+                        </PixelBitDepthList>
+                        <ImageFrameWidthList>
+                            <ImageFrameWidth>3840</ImageFrameWidth>
+                        </ImageFrameWidthList>
+                        <ImageFrameHeightList>
+                            <ImageFrameHeight>2160</ImageFrameHeight>
+                        </ImageFrameHeightList>
+                        <FrameRateList>
+                            <FrameRate>24000 1001</FrameRate>
+                            <FrameRate>24 1</FrameRate>
+                            <FrameRate>25 1</FrameRate>
+                            <FrameRate>30000 1001</FrameRate>
+                            <FrameRate>30 1</FrameRate>
+                        </FrameRateList>
+                    </ImageVirtualTrack>
+                    <AudioVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>0</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>0</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
+                        <SoundfieldGroupConfiguration>
+                            <MCATagSymbol>sgLtRt</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
+                        <AudioChannelMapping>
+                            <AudioChannel>
+                                <MCATagSymbol>chLt</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chRt</MCATagSymbol>
+                            </AudioChannel>
+                        </AudioChannelMapping>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
+                    </AudioVirtualTrack>
+                    <AudioVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
+                       <SoundfieldGroupConfiguration>
+                            <MCATagSymbol>sg51</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
+                        <AudioChannelMapping>
+                            <AudioChannel>
+                                <MCATagSymbol>chL</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chR</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chC</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chLs</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chRs</MCATagSymbol>
+                            </AudioChannel>
+                        </AudioChannelMapping>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
+                    </AudioVirtualTrack>
+                </VirtualTrackList>
+            </CompositionPlaylistConstraints>
+        </Deliverable>
+        <Deliverable>
+            <Id>urn:uuid:4cf95f82-433c-6cb3-be91-2193ca19ac1f</Id>
+            <Label>DRAFT Netflix Originals Delivery Specification UHD 3.3 - SDR RGB HFR</Label>
+            <CompositionPlaylistConstraints>
+                <OwnerId>http://www.netflix.com/DRAFT/deliveryspec/33/UHD_SDR/vectortest02</OwnerId>
+                <ApplicationIdentificationList>
+                    <MatchType>exclusive</MatchType>
+                    <ValueList>
+                        <ApplicationIdentification>http://www.smpte-ra.org/schemas/2067-21/2016</ApplicationIdentification>
+                    </ValueList>
+                </ApplicationIdentificationList>
+                <VirtualTrackList>
+                    <ImageVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>J2K_4KIMF_SingleTileLossyProfile_M7S4</EssenceEncoding>
+                        <Colorimetry>COLOR.3</Colorimetry>
+                        <Sampling>4:4:4</Sampling>
+                        <Quantization>QE.2</Quantization>
+                        <FrameStructure>Progressive</FrameStructure>
+                        <Stereoscopy>Monoscopic</Stereoscopy>
+                        <ColorComponents>RGB</ColorComponents>
+                        <PixelBitDepthList>
+                            <PixelBitDepth>10</PixelBitDepth>
+                        </PixelBitDepthList>
+                        <ImageFrameWidthList>
+                            <ImageFrameWidth>3840</ImageFrameWidth>
+                        </ImageFrameWidthList>
+                        <ImageFrameHeightList>
+                            <ImageFrameHeight>2160</ImageFrameHeight>
+                        </ImageFrameHeightList>
+                        <FrameRateList>
+                            <FrameRate>50 1</FrameRate>
+                            <FrameRate>60000 1001</FrameRate>
+                            <FrameRate>60 1</FrameRate>
+                        </FrameRateList>
+                    </ImageVirtualTrack>
+                    <AudioVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>0</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>0</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
+                        <SoundfieldGroupConfiguration>
+                            <MCATagSymbol>sgLtRt</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
+                        <AudioChannelMapping>
+                            <AudioChannel>
+                                <MCATagSymbol>chLt</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chRt</MCATagSymbol>
+                            </AudioChannel>
+                        </AudioChannelMapping>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
+                    </AudioVirtualTrack>
+                    <AudioVirtualTrack>
+                        <TimelineComplexity type="explicit">
+                            <Sequence>
+                                <Cardinality>
+                                    <MinItem>1</MinItem>
+                                    <MaxItem>1</MaxItem>
+                                </Cardinality>
+                                <Resource>
+                                    <Cardinality>
+                                        <MinItem>1</MinItem>
+                                        <MaxItem>1</MaxItem>
+                                    </Cardinality>
+                                </Resource>
+                            </Sequence>
+                        </TimelineComplexity>
+                        <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
+                        <SoundfieldGroupConfiguration>
+                            <MCATagSymbol>sg51</MCATagSymbol>
+                        </SoundfieldGroupConfiguration>
+                        <AudioChannelMapping>
+                            <AudioChannel>
+                                <MCATagSymbol>chL</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chR</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chC</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chLs</MCATagSymbol>
+                            </AudioChannel>
+                            <AudioChannel>
+                                <MCATagSymbol>chRs</MCATagSymbol>
+                            </AudioChannel>
+                        </AudioChannelMapping>
+                        <SampleRateList>
+                            <SampleRate>48000 1</SampleRate>
+                        </SampleRateList>
+                    </AudioVirtualTrack>
+                </VirtualTrackList>
+            </CompositionPlaylistConstraints>
+        </Deliverable>
+    </DeliverableList>
+</DeliverySpecificationList>
