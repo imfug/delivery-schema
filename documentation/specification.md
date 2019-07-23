@@ -1,33 +1,23 @@
 
-# IMF Delivery Specification List
-
-## History
-
-|Date       |Author     |Change|
-|-----------|-----------|------|
-|2018-05-12 | Dan Tatut | Initial draft|
-|2018-08-13 | Dan Tatut | Initial ASCIIdoc version|
-|2019-03-13 | Dan Tatut | Initial Markdown version|
-
-## Foreword
-
-TBD  
-
-## Intellectual Property
-
-TBD  
+# IMF Delivery Schema
+#### Version 1.0
+#### Release Candidate #1
 
 ## Introduction
 
-TBD  
+Based on the collective experience of the IMF users including content producers, service providers, media distributors, and system manufacturers, a working group was established to assess the feasibility and examine the limitations of automating the delivery specification and IMF validation process. The result of this open and collaborative effort is the definition of this IMF Delivery Schema XML document that accurately describes CPL constraints for IMF deliveries. The Delivery Schema serves the following dual purpose:
+
+1. Provide information for someone creating an IMF for delivery to the entity who specifies the delivery.
+2. Specify a way to validate a delivered IMP to ensure that it meets the specs the receiving entity has paid out.
+
+This document is intended for the IMF user community to initiate implementation and experimentation. Formal standardized engineering document can be produced as the need arises. 
 
 ## Scope
 
-TBD  
+This document defines an XML schema that instantiates as complete deliverable specifications for IMF applications. The syntax and samentic of the schema enable automation in:
 
-## Conformance Notation
-
-TBD  
+1. Generation of XML instances according to prescribed constraints on CPLs.
+2. Unambiguous validation of IMPs as constrained by an XML instance.
 
 ## Normative References
 
@@ -47,6 +37,8 @@ TBD
 12. SMPTE ST 2067-103 Interoperable Master Format - Output Profile List - Common Audio Definition and Macros
 
 13. SMPTE RDD 45-2017 Interoperable Master Format - Apple ProRes
+
+14. SMPTE ST 428-12-2013 D-Cinema - Distribution Master Common Audio Channels and Soundfield Groups
 
 ## Glossary
 
@@ -138,6 +130,20 @@ The Deliverable element describes the various constraints that a deliverable sho
 
 The CompositionPlaylistConstraints element contains a collection of various elements describing constraints that are applicable to the Composition.
 
+##### OwnerId
+
+The OwnerId element is used by the creator/publisher/owner of the delivery specification
+to carry a globally unique identifier that is assigned to the deliverable. The unicity of 
+the identifier can be guaranteed by the owner using a variety of methods. 
+
+It is strongly recommended that the owner uses a DNS-based (Domain Name System) identifier 
+such as: 
+
+http://www.example.com/myDelivery_v1
+
+The OwnerId is used by information systems to uniquely identify the Deliverable. The handling of identifier collisions is beyond the scope of this specification.
+
+
 ##### ApplicationIdentificationList
 
 The ApplicationIdentificationList element contains a list of identifiers that a Composition conforms to.
@@ -160,12 +166,18 @@ conforms. The specification for this element is defined in the following table:
 
 ##### MatchType
 
-The MatchType element defines the matching algorithm to be used to values available in a list. The following values are allowed
+The MatchType element defines the matching algorithm to be used to match values available in a list. The following values are allowed
 
 |Value|Meaning|
 |-----|-------|
 |exclusive | one and only one value must be present|
 |inclusive | one or more values may be present|
+
+For example, when using the MatchType with the ApplicationIdentification items in the ApplicationIdentificationList element, the following behavior is expected:
+
+MatchType is exclusive: among the values present in the list, only one of them can be present in the CPL. The CPL is expected to carry one and only one instance of ApplicationIdentification.
+
+MatchType is inclusive: one or more of the values listed can be present in the CPL. The CPL is expected to carry one or more instances of ApplicationIdentification.
 
 ##### ValueList
 
@@ -184,19 +196,27 @@ The following concrete virtual tracks can be used:
 | MarkerVirtualTrack    | defines a MarkerSequence virtual track in the CompositionPlaylist    |
 | TimedTextVirtualTrack | defines a timed-text virtual track in the CompositionPlaylist        |
 
+*Note:* the VirtualTrackList can be empty, which implies that the Deliverable is not specifying any constrains on the virtual tracks in the CompositionPlaylist.
+
+#### Virtual Tracks
+
+Virtual tracks are defined per kind of essence. All virtual track definitions are derived from a GenericVirtualTrackType which specifies a set of common properties, described in the following sections. Specialized virtual tracks (e.g. ImageVirtualtrack, AudioVirtualTrack, etc) have additional elements required to specify additional constraints on the essence they reference.
+
+#### Generic Virtual Track Elements
+
+##### EssenceEncodingConstraintList
+
+The EssenceEncodingConstraintList element is an optional list of EssenceEncodingConstraint designed to carry custom constraints. Each EssenceEncodingConstraintList is to be considered in a specific context defined by the scope attribute. The scope attribute is a generic URI that is entirely controlled by the entity which specifies the list of constraints. 
+
+##### EssenceEncodingConstraint
+
+Each EssenceEncodingConstraint element is defined by a name and a list of properties. Each property of the list is a Name/Value pair, each being defined as a string. Their values and use depend entirely on the specification represented by the scope attribute of the EssenceEncodingConstraintList.
+
 ##### TimelineComplexity
 
 The TimelineComplexity element describes the cardinality and temporal constraints of its components.
 
-##### Segment
-
-The Segment element describes the cardinality and temporal constraints of its components.
-
 ##### Sequence
-
-The Sequence element describes the cardinality and temporal constraints of its components.
-
-##### Resource
 
 The Sequence element describes the cardinality and temporal constraints of its components.
 
@@ -212,19 +232,48 @@ The MinItem element defines the minimum number of objects of a class.
 
 The MaxItem element defines the maximum number of objects of a class
 
+#### Marker Virtual Track Elements
+
+TBD
+
+#### Image Virtual Track Elements
+
 ##### EssenceEncoding
 
-The EssenceEncoding element defines the encoding method and/or algorithm used to encode the essence used by a specific virtual track.
+The EssenceEncoding element defines the encoding method used for the image samples in the referenced essence. The value of this element is represented by a SMPTE-RA picture encoding symbol.
+
+Currently the following encodings are supported:
+
+|Encodings|
+|-----|
+|JPEG 2000, Broadcast Contribution & IMF Profiles (2K, 4K & 8K), lossy or lossless|
+|Apple ProRes (RDD36, without alpha channel)|
+|ACES EXR (RGB with & without alpha channel)|
+
+The exact symbols that reflect the essence encoding are listed in the XML Schema.
 
 ##### Colorimetry
 
-The Colorimetry element defines the combination of Color Primaries, Transfer Characteristic and potentially Coding Equations to be used for describing the color information in a Trackfile
+The Colorimetry element defines the combination of Color Primaries, Transfer Characteristic and potentially Coding Equations to be used for describing the color information in a Trackfile.
 
 The allowed values depend on the Application being targetted. The syntax of the values shall use the following pattern:
 
-##### COLOR.x
+###### COLOR.x
 
-where x is an alpha-numercial expression defined in the Application specification documents.
+where x is an alpha-numercial expression defined in the Application specification documents. Currently the following values are supported:
+
+|Value|Definition|
+|-----|-------|
+|COLOR.1| see ST2067-20, Table 3|
+|COLOR.2| see ST2067-20, Table 3|
+|COLOR.3| see ST2067-20, Table 3|
+|COLOR.4| see ST2067-21, Table 4|
+|COLOR.5| see ST2067-21, Table 4|
+|COLOR.6| see ST2067-21, Table 4|
+|COLOR.7| see ST2067-21, Table 4|
+|COLOR.APP5.AP0| see ST2067-50, Table 3|
+|COLOR.8DPP| see TSP2121-1, Table 2|
+|XYZ|missing ref.|
 
 ##### Sampling
 
@@ -238,13 +287,13 @@ The Sampling element defines the sampling of the color components in the image e
 
 ##### Quantization
 
-The Quantization element defines the signal quantization system used to encode the normalized signal values into code values. The allowed values depend on the Application being targetted. The syntax of the 
+The Quantization element defines the signal quantization system used to encode the normalized signal values into code values. The allowed values depend on the Application being targetted and they are listed in the table below:
 
-values shall use the following pattern:
-
-##### QE.x
-
-where x is an alpha-numercial value defined in the Application specification documents.
+|Value|Definition|
+|-----|-------|
+|QE.1| see ST2067-20, Table 4|
+|QE.2| see ST2067-20, Table 4|
+|QE.APP4.1| missing ref.|
 
 ##### FrameStructure
 
@@ -257,9 +306,12 @@ The FrameStructure element definies the raster scanning method. Its value must b
 
 ##### Stereoscopy
 
-```xml
-<Stereoscopy>Monoscopic</Stereoscopy>
-```
+The Stereoscopy element defines the monoscopic or stereoscopic nature of the essence referenced by the ImageVirtualTrack. The currently supported values are defined in the table below:
+
+|Value|Meaning|
+|-----|-------|
+|Monoscopic |The image track essence contains a single point-of-view, targeting both the left and right eyes.
+|Stereoscopic  |The image track essence contains two points-of-view, targeting the left and right eyes respectively.
 
 ##### ColorComponents
 
@@ -278,23 +330,40 @@ The PixelBitDepthList contains one or more PixelBitDepth elements that define th
 
 ##### PixelBitDepth
 
-The PixelBitDepth defines the pixel bitdepth value for the deliverable
+The PixelBitDepth defines the pixel bitdepth value for the deliverable. The table below lists the possible values for this element.
+
+|Values|
+|------|
+|8|	
+|10|
+|12|
+|16|
+
+*Note:* Not all Applications support all possible pixel bitdepths for all codecs. Please consult the specification of the target Application for the list of supported values.
 
 ##### ImageFrameWidthList
 
-The ImageFrameWidthList contains one or more ImageFrameWidth elements that define the possible values for the image width.
+The ImageFrameWidthList contains one or more ImageFrameWidth elements that define the possible values for the image width. The ImageFrameWidthList element is optional. 
+
+If absent, then the Deliverable sets no constraints on the horizonal resolution of the essence referenced by the ImageVirtualTrack. In this case, the constraints defined by the Application identified by the ApplicationIdentification elements are applicable.
+
+If present, the Deliverable limits the horizontal resolution of the essence referenced by the ImageVirtualTrack to the values defined by the ImageFrameWidth elements.
 
 ##### ImageFrameWidth
 
-The ImageFrameWidth defines the intended display width.
+The ImageFrameWidth defines the intended display width, or horizontal resolution, in pixels. Please note that values that do not fall in the ranges defined by the Application identified by the ApplicationIdentification elements are not valid.
 
 ##### ImageFrameHeightList
 
-The ImageFrameHeightList contains one or more ImageFrameHeight elements that define the possible values for the image height.
+The ImageFrameHeightList contains one or more ImageFrameHeight elements that define the possible values for the image height. The ImageFrameHeightList element is optional. 
+
+If absent, then the Deliverable sets no constraints on the vertical resolution of the essence referenced by the ImageVirtualTrack. In this case, the constraints defined by the Application identified by the ApplicationIdentification elements are applicable.
+
+If present, the Deliverable limits the vertical resolution of the essence referenced by the ImageVirtualTrack to the values defined by the ImageFrameHeight elements.
 
 ##### ImageFrameHeight
 
-The ImageFrameHeight defines the intended display height.
+The ImageFrameHeight defines the intended display height, or vertical resolution, in pixels. Please note that values that do not fall in the ranges defined by the Application identified by the ApplicationIdentification elements are not valid.
 
 ##### FrameRateList
 
@@ -304,29 +373,81 @@ The FrameRateList contains one or more FrameRate elements that define the possib
 
 The FrameRate defines the intended video frame rate.
 
+#### Audio Virtual Track Elements
+
 ##### SoundfieldGroupConfiguration
 
-TBD
+The SoundfieldGroupConfiguration element defines the soundfield configuration for the audio channels in the group. The configuration is signaled via the MCATagSymbol child element.
 
 ##### AudioChannelMapping
 
-TBD
+The AudioChannelMapping element is a list of ordered AudioChannel elements that explicit the audio channel layout in the soundfield group defined by the SoundfieldGroupConfiguration.
 
 ##### AudioChannel
 
-TBD
+The AudioChannel element defines the constraints on a single audio channel that participates in the soundfield group defined by the SoundfieldGroupConfiguration element.
+
+The routing destination is signaled via the MCATagSymbol child element.
 
 ##### MCATagSymbol
 
-TBD
+The MCATagSymbol element is a human readable mnemonic that uniquely identifies the audio channel or soundfield group. The values of the MCATagSymbol element are restricted to the list of values defined in SMPTE ST2067-8 and ST428-12. The symbols use prefixes specified in SMPTE ST2067-2.
 
-##### UCSEncoding
+An additional constraint is applied to the list of possible values, based on the parent element (i.e. SoundfieldGroupConfiguration or AudioChannel).
 
-TBD
+##### SampleRateList
 
-##### NamespaceURI
+The SampleRateList contains one or more SampleRate elements that define the possible values for the audio sample rate.
 
-TBD
+##### SampleRate   
+
+The SampleRate defines the intended audio sample rate. Currently only the following values are supported by the ST2067 family of standards:
+
+|Values|Meaning|
+|------|-------|
+|48000 1|	represents an audio sampling rate of 48kHz|
+|96000 1|	represents an audio sampling rate of 96kHz|
+
+##### EssenceEncoding
+
+The EssenceEncoding element defines the encoding method used for the audio samples in the referenced essence. The value of this element is represented by a SMPTE-RA sound encoding symbol.
+
+Currently, the ST2067 family of standards only support uncompressed PCM samples. The label defining such an encoding method is:
+
+###### MXFGCClipWrappedBroadcastWaveAudioData
+
+##### RFC5646SpokenLanguage
+
+The RFC5646SpokenLanguage element is used to specify the language or a language and a region required by the virtual track. The valid values and combinations are specified in RFC 5646.
+
+*Note:* the RFC5646SpokenLanguage is optional
+
+#### Timed Text Virtual Track Elements
+
+##### TimedTextSequenceType
+
+The TimedTextSequenceType element defines the kind of timed text referenced by the virtual track. The following table contains the currently accepted values:
+
+|Values|
+|------|
+|SubtitlesSequence|
+|HearingImpairedCaptionsSequence|
+|VisuallyImpairedTextSequence|
+|CommentarySequence|
+|KaraokeSequence|
+
+##### RFC5646LanguageTagListConstraints
+
+The RFC5646LanguageTagListConstraints element is used to describe the constraints on the language or language and region on timed text virtual tracks. Language signaling is optional in timed text track files, however in practice it might be dsirable to enforce the presence of the language information or even enfore a specific language for a certain virtual track. Currently these contraints are implemented as a choice between two options, using the following child elements:
+
+|Values|Meaning|
+|------|------|
+|**RFC5646LanguageTagList**|A specific language or a language/region tag|
+|**RFC5646LanguageTagListPresent**|A simple "presence required" boolean flag|
+
+*Note:* the RFC5646LanguageTagListConstraints element is optional
+
+#### Digital Signature
 
 ##### Signer
 
@@ -348,7 +469,7 @@ TBD
 
 This specification is accompanied by the following element, which is an XML schema document as specified in [XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/).
 
-##### imf-cpl-20160411.xsd
+The schema can be found [here](../schema/IMF_DeliverySchema.xsd)
 
 This element collects the XML schema definitions defined in this specification. It is informative and, in case of conflict, this specification takes precedence.
 
@@ -360,7 +481,7 @@ TBD
 
 This specification is accompanied by the following element, which is an XML document that contains a sample instance of the DeliverySpecificationList element.
 
-## Sample
+#### Sample
 
 [Netflix Original specification 3.0 UHD 4K HDR](../examples/Netflix/DRAFT_Netflix_OriginalsSpec_3.0_UHD_4K_SDR.xml)
 

@@ -52,7 +52,6 @@
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
-                        <xs:element name="ApplicationIdentification" type="xs:anyURI" minOccurs="0"/>
                         <xs:element name="SegmentCardinality" type="dsl:CardinalityType" minOccurs="0">
                         </xs:element>
                         <xs:element name="VirtualTrackList">
@@ -117,11 +116,11 @@
                         <xs:element name="Sequence">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="Cardinality" type="dsl:CardinalityType" minOccurs="0" maxOccurs="1"/>
-                                    <xs:element name="Resource">
+                                    <xs:element name="Cardinality" type="dsl:CardinalityType" minOccurs="0"/>
+                                    <xs:element name="Resource" minOccurs="0">
                                         <xs:complexType>
                                             <xs:sequence>
-                                                <xs:element name="Cardinality" type="dsl:CardinalityType" minOccurs="0" maxOccurs="1"/>
+                                                <xs:element name="Cardinality" type="dsl:CardinalityType"/>
                                             </xs:sequence>
                                         </xs:complexType>
                                     </xs:element>
@@ -165,7 +164,7 @@
                                     <xs:simpleType>
                                         <xs:restriction base="xs:string">
                                             <!-- As defined in ST2067-8 and ST428-12-->
-                                            <xs:pattern value="ST|DM|DNS|30|40|50|60|70|LtRt|51EX|HA|VA|51|71|SDS|61|M"/>
+                                            <xs:pattern value="sgST|sgDM|sgDNS|sg30|sg40|sg50|sg60|sg70|sgLtRt|sg51EX|sgHA|sgVA|sg51|sg71|sgSDS|sg61|sgM"/>
                                         </xs:restriction>
                                     </xs:simpleType>
                                 </xs:element>
@@ -182,7 +181,7 @@
                                                 <xs:simpleType>
                                                     <xs:restriction base="xs:string">
                                                         <!-- As defined in ST2067-8 and ST428-12-->
-                                                        <xs:pattern value="M1|M2|Lt|Rt|Lst|Rst|S|NSC[0-9]{3}|L|R|C|LFE|Ls|Rs|Lss|Rss|Lrs|Rrs|Lc|Rc|Cs|HI|VIN"/>
+                                                        <xs:pattern value="chM1|chM2|chLt|chRt|chLst|chRst|chS|chNSC[0-9]{3}|chL|chR|chC|chLFE|chLs|chRs|chLss|chRss|chLrs|chRrs|chLc|chRc|chCs|chHI|chVIN"/>
                                                     </xs:restriction>
                                                 </xs:simpleType>
                                             </xs:element>
@@ -324,7 +323,7 @@
                     <xs:restriction base="xs:integer"/>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="MaxItem">
+            <xs:element name="MaxItem" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:integer"/>
                 </xs:simpleType>
