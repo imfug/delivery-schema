@@ -14,6 +14,9 @@ Please use GitHub issue tracking [1] to file any issues that you come across or 
 This project is lead by the IMF User Group membership. To learn more about the IMF User Group, please visit https://www.imfug.com
 
 Repository Layout:
+
 /documentation - prose specification for the IMF Delivery Schema
+
 /examples - example delivery specification XML documents that conform to the IMF Delivery Schema
+
 /schema - the actual IMF Delivery Schema XSD file
