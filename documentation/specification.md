@@ -216,15 +216,7 @@ Each EssenceEncodingConstraint element is defined by a name and a list of proper
 
 The TimelineComplexity element describes the cardinality and temporal constraints of its components.
 
-##### Segment
-
-The Segment element describes the cardinality and temporal constraints of its components.
-
 ##### Sequence
-
-The Sequence element describes the cardinality and temporal constraints of its components.
-
-##### Resource
 
 The Sequence element describes the cardinality and temporal constraints of its components.
 

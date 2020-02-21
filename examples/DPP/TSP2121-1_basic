@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DeliverySpecificationList xmlns="http://www.imfug.com/ns/delivery-schema/2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <Id>urn:uuid:605ABA4B-2DB3-4A03-8709-C5A76CD021D5</Id>
+    <Id>urn:uuid:425df11d-04fb-43e4-a910-588b75539e8d</Id>
     <AnnotationText>DRAFT DPP Delivery Requirements TSP 2121-1 v0.2</AnnotationText>
-    <IssueDate>2019-02-22T18:46:10-00:00</IssueDate>
+    <IssueDate>2019-07-23T20:29:10-00:00</IssueDate>
     <Issuer>DPP Lab</Issuer>
     <Creator>Ulrich - testlab@thedpp.com</Creator>
     <DeliverableList>
@@ -75,14 +75,14 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>LtRt</MCATagSymbol>
+                            <MCATagSymbol>sgLtRt</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>Lt</MCATagSymbol>
+                                <MCATagSymbol>chLt</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rt</MCATagSymbol>
+                                <MCATagSymbol>chRt</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
@@ -106,26 +106,26 @@
                         </TimelineComplexity>
                         <EssenceEncoding>MXFGCClipWrappedBroadcastWaveAudioData</EssenceEncoding>
                         <SoundfieldGroupConfiguration>
-                            <MCATagSymbol>51</MCATagSymbol>
+                            <MCATagSymbol>sg51</MCATagSymbol>
                         </SoundfieldGroupConfiguration>
                         <AudioChannelMapping>
                             <AudioChannel>
-                                <MCATagSymbol>L</MCATagSymbol>
+                                <MCATagSymbol>chL</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>R</MCATagSymbol>
+                                <MCATagSymbol>chR</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>C</MCATagSymbol>
+                                <MCATagSymbol>chC</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>LFE</MCATagSymbol>
+                                <MCATagSymbol>chLFE</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Ls</MCATagSymbol>
+                                <MCATagSymbol>chLs</MCATagSymbol>
                             </AudioChannel>
                             <AudioChannel>
-                                <MCATagSymbol>Rs</MCATagSymbol>
+                                <MCATagSymbol>chRs</MCATagSymbol>
                             </AudioChannel>
                         </AudioChannelMapping>
                         <SampleRateList>
