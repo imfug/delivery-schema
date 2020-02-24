@@ -12,8 +12,8 @@ This project is lead by the IMF User Group membership. To learn more about the I
 
 Repository Layout:
 
-[/documentation](documentation/) - prose specification for the IMF Delivery Schema
+[/documentation](documentation/specification) - prose specification for the IMF Delivery Schema
 
-[/examples](examples/) - example delivery specification XML documents that conform to the IMF Delivery Schema
+[/examples](https://github.com/imfug/delivery-schema/tree/master/examples) - example delivery specification XML documents that conform to the IMF Delivery Schema
 
-[/schema](schema/) - the actual IMF Delivery Schema XSD file
+[/schema](schema/IMF_DeliverySchema.xsd) - the actual IMF Delivery Schema XSD file
