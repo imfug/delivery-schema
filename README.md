@@ -1,5 +1,4 @@
 # IMF Delivery Schema
-#### Version 1.0.0
 
 Based on the collective experience of the IMF users including content producers, service providers, media distributors, and system manufacturers, a working group was established to assess the feasibility and examine the limitations of automating the delivery specification and IMF validation process. The result of this open and collaborative effort is the definition of this IMF Delivery Schema XML document that accurately describes CPL constraints for IMF deliveries. The Delivery Schema serves the following dual purpose:
 
@@ -12,8 +11,10 @@ This project is lead by the IMF User Group membership. To learn more about the I
 
 Repository Layout:
 
+*Links pointing to latest version in master branch. Tagged releases available [here](https://github.com/imfug/delivery-schema/releases).*
+
 [/documentation](documentation/specification) - prose specification for the IMF Delivery Schema
 
-[/examples](https://github.com/imfug/delivery-schema/tree/master/examples) - example delivery specification XML documents that conform to the IMF Delivery Schema
+/examples - example delivery specification XML documents that conform to the IMF Delivery Schema
 
-[/schema](schema/IMF_DeliverySchema.xsd) - the actual IMF Delivery Schema XSD file
+/schema - the actual IMF Delivery Schema XSD file
