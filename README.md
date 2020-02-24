@@ -7,11 +7,11 @@ Based on the collective experience of the IMF users including content producers,
 
 Please use GitHub [issue tracking](https://github.com/imfug/delivery-schema/issues) to file any issues that you come across or feature requests that you would like to discuss.
 
-This project is lead by the IMF User Group membership. To learn more about the IMF User Group, please visit https://www.imfug.com
+This project is lead by the IMF User Group membership. To learn more about the IMF User Group, please visit [imfug.com](https://www.imfug.com/)
 
-Repository Layout:
+**Repository Layout:**
 
-*Links pointing to latest version in master branch. Tagged releases available [here](https://github.com/imfug/delivery-schema/releases).*
+*(Links pointing to latest version in master branch. Tagged releases available [here](https://github.com/imfug/delivery-schema/releases).)*
 
 [/documentation](documentation/specification) - prose specification for the IMF Delivery Schema
 
